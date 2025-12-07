@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Nolan & Greta — FAQ</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Core styles -->
+  <link rel="stylesheet" href="assets/css/base.css" />
+  <link rel="stylesheet" href="assets/css/layout.css" />
+  <link rel="stylesheet" href="assets/css/components.css" />
+  <link rel="stylesheet" href="assets/css/pages.css" />
+
+  <meta
+    name="description"
+    content="Frequently asked questions about Nolan and Greta's wedding, including dress code, parking, children, and more."
+  />
+</head>
+<body data-page="faq">
+  <!-- HEADER / NAVBAR -->
+  <header class="site-header">
+    <div class="content-width header-inner">
+      <div class="logo">
+        <a href="index.html">
+          <span class="logo-mark">N &amp; G</span>
+          <span class="logo-text">Nolan &amp; Greta</span>
+        </a>
+      </div>
+
+      <button
+        class="nav-toggle"
+        data-nav-toggle
+        aria-label="Toggle navigation"
+        aria-expanded="false"
+      >
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <nav class="site-nav" data-nav>
+        <a href="index.html">Home</a>
+        <a href="schedule.html">Schedule</a>
+        <a href="travel.html">Travel</a>
+        <a href="rsvp.html">RSVP</a>
+        <a href="faq.html">FAQ</a>
+        <a href="party.html">Wedding Party</a>
+        <a href="story.html">Our Story</a>
+      </nav>
+    </div>
+    <div class="nav-overlay" data-nav-overlay></div>
+  </header>
+
+  <main>
+    <section class="page-section">
+      <div class="content-width">
+        <header class="page-header">
+          <p class="page-kicker">Details and logistics</p>
+          <h1>Frequently asked questions</h1>
+          <p class="page-intro">
+            If you are wondering about dress code, parking, kids, or gifts, you are
+            in the right place. If you do not see your question below, please reach
+            out to us.
+          </p>
+        </header>
+
+        <div id="faq-list" data-faq-list>
+          <!-- Filled by renderFaq() in main.js using FAQ_ITEMS -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="content-width footer-inner">
+      <p>&copy; <span id="footer-year"></span> Nolan &amp; Greta</p>
+      <p class="footer-note">
+        Reach out any time if something is unclear or you need help planning travel.
+      </p>
+    </div>
+  </footer>
+
+  <!-- DATA SCRIPTS -->
+  <script src="assets/js/data.faq.js"></script>
+
+  <!-- BEHAVIOR SCRIPTS -->
+  <script src="assets/js/navbar.js"></script>
+  <script src="assets/js/modal.js"></script>
+  <script src="assets/js/countdown.js"></script>
+  <script src="assets/js/main.js"></script>
+
+  <!-- Footer year -->
+  <script>
+    (function () {
+      var el = document.getElementById("footer-year");
+      if (el) {
+        el.textContent = new Date().getFullYear();
+      }
+    })();
+  </script>
+</body>
+</html>

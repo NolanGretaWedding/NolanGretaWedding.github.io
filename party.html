@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Nolan & Greta — Wedding Party</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Core styles -->
+  <link rel="stylesheet" href="assets/css/base.css" />
+  <link rel="stylesheet" href="assets/css/layout.css" />
+  <link rel="stylesheet" href="assets/css/components.css" />
+  <link rel="stylesheet" href="assets/css/pages.css" />
+
+  <meta
+    name="description"
+    content="Meet the wedding party for Nolan and Greta's wedding, including bridesmaids, groomsmen, and other important people."
+  />
+</head>
+<body data-page="party">
+  <!-- HEADER / NAVBAR -->
+  <header class="site-header">
+    <div class="content-width header-inner">
+      <div class="logo">
+        <a href="index.html">
+          <span class="logo-mark">N &amp; G</span>
+          <span class="logo-text">Nolan &amp; Greta</span>
+        </a>
+      </div>
+
+      <button
+        class="nav-toggle"
+        data-nav-toggle
+        aria-label="Toggle navigation"
+        aria-expanded="false"
+      >
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <nav class="site-nav" data-nav>
+        <a href="index.html">Home</a>
+        <a href="schedule.html">Schedule</a>
+        <a href="travel.html">Travel</a>
+        <a href="rsvp.html">RSVP</a>
+        <a href="faq.html">FAQ</a>
+        <a href="party.html">Wedding Party</a>
+        <a href="story.html">Our Story</a>
+      </nav>
+    </div>
+    <div class="nav-overlay" data-nav-overlay></div>
+  </header>
+
+  <main>
+    <section class="page-section">
+      <div class="content-width">
+        <header class="page-header">
+          <p class="page-kicker">The people standing with us</p>
+          <h1>Wedding party</h1>
+          <p class="page-intro">
+            These are the friends and family who will be standing with us on the day.
+            We are very thankful for each of them and for the roles they have played
+            in our lives.
+          </p>
+        </header>
+
+        <div class="party-grid" data-party-list>
+          <!-- Filled by renderParty() in main.js using PARTY_MEMBERS -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="content-width footer-inner">
+      <p>&copy; <span id="footer-year"></span> Nolan &amp; Greta</p>
+      <p class="footer-note">
+        We would not be here without the support of our family and friends.
+      </p>
+    </div>
+  </footer>
+
+  <!-- DATA SCRIPTS -->
+  <script src="assets/js/data.party.js"></script>
+
+  <!-- BEHAVIOR SCRIPTS -->
+  <script src="assets/js/navbar.js"></script>
+  <script src="assets/js/modal.js"></script>
+  <script src="assets/js/countdown.js"></script>
+  <script src="assets/js/main.js"></script>
+
+  <!-- Footer year -->
+  <script>
+    (function () {
+      var el = document.getElementById("footer-year");
+      if (el) {
+        el.textContent = new Date().getFullYear();
+      }
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Nolan & Greta — Travel and Lodging</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Core styles -->
+  <link rel="stylesheet" href="assets/css/base.css" />
+  <link rel="stylesheet" href="assets/css/layout.css" />
+  <link rel="stylesheet" href="assets/css/components.css" />
+  <link rel="stylesheet" href="assets/css/pages.css" />
+
+  <meta
+    name="description"
+    content="Travel and lodging information for Nolan and Greta's wedding, including airports, hotels, and local transportation."
+  />
+</head>
+<body data-page="travel">
+  <!-- HEADER / NAVBAR -->
+  <header class="site-header">
+    <div class="content-width header-inner">
+      <div class="logo">
+        <a href="index.html">
+          <span class="logo-mark">N &amp; G</span>
+          <span class="logo-text">Nolan &amp; Greta</span>
+        </a>
+      </div>
+
+      <button
+        class="nav-toggle"
+        data-nav-toggle
+        aria-label="Toggle navigation"
+        aria-expanded="false"
+      >
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <nav class="site-nav" data-nav>
+        <a href="index.html">Home</a>
+        <a href="schedule.html">Schedule</a>
+        <a href="travel.html">Travel</a>
+        <a href="rsvp.html">RSVP</a>
+        <a href="faq.html">FAQ</a>
+        <a href="party.html">Wedding Party</a>
+        <a href="story.html">Our Story</a>
+      </nav>
+    </div>
+    <div class="nav-overlay" data-nav-overlay></div>
+  </header>
+
+  <main>
+    <section class="page-section">
+      <div class="content-width">
+        <header class="page-header">
+          <p class="page-kicker">Getting here</p>
+          <h1>Travel and lodging</h1>
+          <p class="page-intro travel-intro">
+            We are so thankful that many of you will be traveling to celebrate with
+            us. Below are recommended airports, hotels, and a few notes about
+            getting around once you arrive.
+          </p>
+        </header>
+      </div>
+    </section>
+
+    <section class="page-section section-alt">
+      <div class="content-width">
+        <h2>Airports</h2>
+        <p class="text-muted">
+          These are the main airports that make sense for the venue. Drive times are
+          approximate and can vary with traffic.
+        </p>
+
+        <div class="card-grid" data-travel-airports>
+          <!-- Filled by renderTravel() using TRAVEL_AIRPORTS -->
+        </div>
+      </div>
+    </section>
+
+    <section class="page-section">
+      <div class="content-width">
+        <h2>Hotels</h2>
+        <p class="text-muted">
+          We have listed a few options at different price points and distances from
+          the venue. If we have a room block, those hotels will be marked clearly.
+        </p>
+
+        <div class="card-grid" data-travel-hotels>
+          <!-- Filled by renderTravel() using TRAVEL_HOTELS -->
+        </div>
+
+        <p class="text-muted" style="margin-top: 1rem; font-size: 0.85rem;">
+          If you prefer to book something else (vacation rentals, other hotels),
+          feel free. The suggestions here are meant to make planning easier, not
+          required.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="content-width footer-inner">
+      <p>&copy; <span id="footer-year"></span> Nolan &amp; Greta</p>
+      <p class="footer-note">
+        Let us know if you need help choosing a hotel or planning your travel.
+      </p>
+    </div>
+  </footer>
+
+  <!-- DATA SCRIPTS -->
+  <script src="assets/js/data.travel.js"></script>
+
+  <!-- BEHAVIOR SCRIPTS -->
+  <script src="assets/js/navbar.js"></script>
+  <script src="assets/js/modal.js"></script>
+  <script src="assets/js/countdown.js"></script>
+  <script src="assets/js/main.js"></script>
+
+  <!-- Footer year -->
+  <script>
+    (function () {
+      var el = document.getElementById("footer-year");
+      if (el) {
+        el.textContent = new Date().getFullYear();
+      }
+    })();
+  </script>
+</body>
+</html>

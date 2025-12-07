@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Nolan & Greta — RSVP</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Core styles -->
+  <link rel="stylesheet" href="assets/css/base.css" />
+  <link rel="stylesheet" href="assets/css/layout.css" />
+  <link rel="stylesheet" href="assets/css/components.css" />
+  <link rel="stylesheet" href="assets/css/pages.css" />
+
+  <meta
+    name="description"
+    content="RSVP for Nolan and Greta's wedding. Please let us know if you can attend."
+  />
+</head>
+<body data-page="rsvp">
+  <!-- HEADER / NAVBAR -->
+  <header class="site-header">
+    <div class="content-width header-inner">
+      <div class="logo">
+        <a href="index.html">
+          <span class="logo-mark">N &amp; G</span>
+          <span class="logo-text">Nolan &amp; Greta</span>
+        </a>
+      </div>
+
+      <button
+        class="nav-toggle"
+        data-nav-toggle
+        aria-label="Toggle navigation"
+        aria-expanded="false"
+      >
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <nav class="site-nav" data-nav>
+        <a href="index.html">Home</a>
+        <a href="schedule.html">Schedule</a>
+        <a href="travel.html">Travel</a>
+        <a href="rsvp.html">RSVP</a>
+        <a href="faq.html">FAQ</a>
+        <a href="party.html">Wedding Party</a>
+        <a href="story.html">Our Story</a>
+      </nav>
+    </div>
+    <div class="nav-overlay" data-nav-overlay></div>
+  </header>
+
+  <main>
+    <section class="page-section">
+      <div class="content-width">
+        <header class="page-header">
+          <p class="page-kicker">Let us know your plans</p>
+          <h1>RSVP</h1>
+          <p class="page-intro">
+            Please respond by <strong>August 1, 2025</strong> so we can finalize
+            food, seating, and other logistics. If anything changes after that,
+            feel free to contact us directly.
+          </p>
+        </header>
+
+        <div class="rsvp-iframe-wrapper">
+          <!-- Replace the src value with your actual Google Form embed URL -->
+          <iframe
+            src="https://docs.google.com/forms/d/e/REPLACE_WITH_YOUR_ID/viewform?embedded=true"
+            width="100%"
+            height="1200"
+            frameborder="0"
+            marginheight="0"
+            marginwidth="0"
+          >
+            Loading…
+          </iframe>
+        </div>
+
+        <p class="text-muted" style="margin-top: 0.75rem; font-size: 0.85rem;">
+          If the form does not appear or you have trouble submitting it, please
+          reach out and we will record your response another way.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="content-width footer-inner">
+      <p>&copy; <span id="footer-year"></span> Nolan &amp; Greta</p>
+      <p class="footer-note">
+        Thank you for taking the time to RSVP. We are excited to celebrate with you.
+      </p>
+    </div>
+  </footer>
+
+  <!-- (No data scripts needed here unless you want them) -->
+
+  <!-- BEHAVIOR SCRIPTS -->
+  <script src="assets/js/navbar.js"></script>
+  <script src="assets/js/modal.js"></script>
+  <script src="assets/js/countdown.js"></script>
+  <script src="assets/js/main.js"></script>
+
+  <!-- Footer year -->
+  <script>
+    (function () {
+      var el = document.getElementById("footer-year");
+      if (el) {
+        el.textContent = new Date().getFullYear();
+      }
+    })();
+  </script>
+</body>
+</html>
