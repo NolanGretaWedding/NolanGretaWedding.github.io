@@ -14,7 +14,7 @@
   function isInvited(inputName) {
     if (typeof INVITED_NAMES === "undefined") {
       console.warn("[RSVP gate] INVITED_NAMES is not defined; allowing everyone.");
-      return true; // fail-open so guests aren't blocked if you forget the list
+      return true; // fail-open so guests aren't stuck
     }
 
     if (!Array.isArray(INVITED_NAMES) || INVITED_NAMES.length === 0) {
@@ -29,7 +29,7 @@
       var invited = normalizeName(invitedRaw);
       if (!invited) return false;
 
-      // exact match OR one string contains the other (for small differences)
+      // exact match OR one string contains the other
       if (invited === normalizedInput) return true;
       if (invited.includes(normalizedInput)) return true;
       if (normalizedInput.includes(invited)) return true;
@@ -37,10 +37,11 @@
       return false;
     });
 
-    console.log(
-      "[RSVP gate] isInvited?",
-      { input: normalizedInput, match: match, invitedList: INVITED_NAMES }
-    );
+    console.log("[RSVP gate] isInvited?", {
+      input: normalizedInput,
+      match: match,
+      invitedList: INVITED_NAMES
+    });
 
     return match;
   }
@@ -83,7 +84,7 @@
         try {
           localStorage.setItem("rsvp-access", "granted");
         } catch (e) {
-          // ignore storage issues
+          // ignore storage
         }
       } else {
         console.log("[RSVP gate] Name NOT found in list.");
@@ -100,10 +101,9 @@
     setupGate();
   }
 
-  // Make it callable from main.js if you want
+  // Export (for main.js), but also self-init on RSVP page.
   window.initRsvpGate = initRsvpGate;
 
-  // Also self-init on the RSVP page, even if main.js never calls it
   document.addEventListener("DOMContentLoaded", function () {
     var body = document.body;
     if (!body) return;
