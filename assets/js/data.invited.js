@@ -4,26 +4,21 @@
 
 "use strict";
 
-var INVITED_NAMES = [
-  "Nolan Pettit",
-  "Greta Frederick Harteis",
-  "Rene Pettit",
-  "Rob Pettit",
-  "Robert Pettit",
-  "Rylan Pettit",
-  "Aedan Pettit",
-  "Lara Pettit",
-  "Carly Hughes",
-  "Allison Frederick",
-  "Eirik Harteis",
-  "Jakob Summers",
-  "Faith Summers",
-  "Ammon Harteis",
-  "Merrill Harteis"
+var INVITED_NAMES = ["test person"];
 
 
-  // Add or edit entries as needed:
-  // "First Last",
-  // "Household Name",
-  // "Family Lastname",
-];
+// "Nolan Pettit",
+// "Greta Frederick Harteis",
+// "Rene Pettit",
+// "Rob Pettit",
+// "Robert Pettit",
+// "Rylan Pettit",
+// "Aedan Pettit",
+// "Lara Pettit",
+// "Carly Hughes",
+// "Allison Frederick",
+// "Eirik Harteis",
+// "Jakob Summers",
+// "Faith Summers",
+// "Ammon Harteis",
+// "Merrill Harteis"
