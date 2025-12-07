@@ -63,9 +63,42 @@
             feel free to contact us directly.
           </p>
         </header>
-        
-        <div class="rsvp-iframe-wrapper">
-          <!-- Replace the src value with your actual Google Form embed URL -->
+
+        <!-- Soft gate: name check before showing the form -->
+        <div id="rsvp-gate">
+          <p>
+            To access the RSVP form, please enter the name exactly as it appears
+            on your invitation.
+          </p>
+          <form id="rsvp-name-form" class="rsvp-name-form">
+            <label for="guest-name">
+              Name on invitation
+            </label>
+            <input
+              id="guest-name"
+              name="guest-name"
+              type="text"
+              autocomplete="name"
+              required
+            />
+            <button class="btn btn-primary btn-large" type="submit">
+              Continue
+            </button>
+          </form>
+          <p
+            id="rsvp-error"
+            class="text-muted"
+            style="margin-top: 0.5rem; font-size: 0.9rem;"
+            aria-live="polite"
+          ></p>
+        </div>
+
+        <!-- Hidden until gate passes -->
+        <div
+          id="rsvp-form-container"
+          class="rsvp-iframe-wrapper"
+          hidden
+        >
           <iframe
             src="https://docs.google.com/forms/d/e/1FAIpQLScn681YMdFl8GTFfgYEol0fnN9E9yoaOnthcmQE-zMYenaBRA/viewform?embedded=true"
             width="100%"
@@ -79,8 +112,8 @@
         </div>
 
         <p class="text-muted" style="margin-top: 0.75rem; font-size: 0.85rem;">
-          If the form does not appear or you have trouble submitting it, please
-          reach out and we will record your response another way.
+          If you have trouble accessing the form, please contact us and we will
+          gladly record your RSVP another way.
         </p>
       </div>
     </section>
@@ -96,9 +129,11 @@
     </div>
   </footer>
 
-  <!-- (No data scripts needed here unless you want them) -->
+  <!-- DATA SCRIPTS -->
+  <script src="assets/js/data.invited.js"></script>
 
   <!-- BEHAVIOR SCRIPTS -->
+  <script src="assets/js/rsvp-gate.js"></script>
   <script src="assets/js/navbar.js"></script>
   <script src="assets/js/modal.js"></script>
   <script src="assets/js/countdown.js"></script>
