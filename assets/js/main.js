@@ -1,18 +1,5 @@
 // assets/js/main.js
 // Global orchestration + page-specific rendering.
-//
-// This file expects (optionally):
-//   - SCHEDULE_ITEMS, VENUES          from data.schedule.js
-//   - TRAVEL_HOTELS, TRAVEL_AIRPORTS  from data.travel.js
-//   - FAQ_ITEMS                       from data.faq.js
-//   - PARTY_MEMBERS                   from data.party.js
-//   - INVITED_NAMES                   from data.invited.js (for RSVP gate)
-//
-// And it expects these global init functions from other JS files:
-//   - initNavbar()   from navbar.js
-//   - initModals()   from modal.js
-//   - initCountdown() from countdown.js
-//   - initRsvpGate() from rsvp-gate.js
 
 (function () {
     "use strict";
@@ -50,10 +37,10 @@
   
           venueHtml =
             '<div class="schedule-venue">' +
-            '<div>' +
+            "<div>" +
             (v.name || "") +
             "</div>" +
-            '<div>' +
+            "<div>" +
             (v.address || "") +
             "</div>" +
             mapLink +
@@ -61,9 +48,7 @@
         }
   
         var dayLabel = item.dayLabel
-          ? '<p class="schedule-meta"><span>' +
-            item.dayLabel +
-            "</span></p>"
+          ? '<p class="schedule-meta"><span>' + item.dayLabel + "</span></p>"
           : "";
   
         var whenMetaParts = [];
@@ -156,17 +141,11 @@
         Array.isArray(TRAVEL_AIRPORTS)
       ) {
         airportContainer.innerHTML = TRAVEL_AIRPORTS.map(function (airport) {
-          var code = airport.code
-            ? "<strong>" + airport.code + "</strong>"
-            : "";
+          var code = airport.code ? "<strong>" + airport.code + "</strong>" : "";
           var drive = airport.drive
-            ? '<span class="travel-drive">' +
-              airport.drive +
-              " drive</span>"
+            ? '<span class="travel-drive">' + airport.drive + " drive</span>"
             : "";
-          var notes = airport.notes
-            ? "<p>" + airport.notes + "</p>"
-            : "";
+          var notes = airport.notes ? "<p>" + airport.notes + "</p>" : "";
   
           var link = airport.url
             ? '<a href="' +
@@ -227,7 +206,6 @@
         );
       }).join("");
   
-      // Expand/collapse behavior
       container.addEventListener("click", function (event) {
         var button = event.target.closest(".faq-question");
         if (!button) return;
@@ -288,7 +266,6 @@
     document.addEventListener("DOMContentLoaded", function () {
       var page = getPageId();
   
-      // Global features
       if (typeof initNavbar === "function") {
         initNavbar();
       }
@@ -296,7 +273,6 @@
         initModals();
       }
   
-      // Countdown appears on any page with [data-countdown]
       if (
         typeof initCountdown === "function" &&
         document.querySelector("[data-countdown]")
@@ -304,7 +280,6 @@
         initCountdown();
       }
   
-      // Page-specific behavior
       switch (page) {
         case "schedule":
           renderSchedule();
@@ -324,7 +299,6 @@
           }
           break;
         default:
-          // home, story, etc. currently static
           break;
       }
     });
