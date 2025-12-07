@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Nolan & Greta — Schedule</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Core styles -->
+  <link rel="stylesheet" href="assets/css/base.css" />
+  <link rel="stylesheet" href="assets/css/layout.css" />
+  <link rel="stylesheet" href="assets/css/components.css" />
+  <link rel="stylesheet" href="assets/css/pages.css" />
+
+  <meta
+    name="description"
+    content="Schedule for the wedding weekend of Nolan and Greta: ceremony, reception, and other events."
+  />
+</head>
+<body data-page="schedule">
+  <!-- HEADER / NAVBAR (same structure as index.html) -->
+  <header class="site-header">
+    <div class="content-width header-inner">
+      <div class="logo">
+        <a href="index.html">
+          <span class="logo-mark">N &amp; G</span>
+          <span class="logo-text">Nolan &amp; Greta</span>
+        </a>
+      </div>
+
+      <!-- Mobile nav toggle -->
+      <button
+        class="nav-toggle"
+        data-nav-toggle
+        aria-label="Toggle navigation"
+        aria-expanded="false"
+      >
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <!-- Main navigation -->
+      <nav class="site-nav" data-nav>
+        <a href="index.html">Home</a>
+        <a href="schedule.html">Schedule</a>
+        <a href="travel.html">Travel</a>
+        <a href="rsvp.html">RSVP</a>
+        <a href="faq.html">FAQ</a>
+        <a href="party.html">Wedding Party</a>
+        <a href="story.html">Our Story</a>
+      </nav>
+    </div>
+
+    <!-- Mobile overlay -->
+    <div class="nav-overlay" data-nav-overlay></div>
+  </header>
+
+  <main>
+    <!-- PAGE HEADER -->
+    <section class="page-section">
+      <div class="content-width">
+        <header class="page-header">
+          <p class="page-kicker">Weekend schedule</p>
+          <h1>Schedule</h1>
+          <p class="page-intro">
+            Below is the plan for the wedding day (and any additional events).
+            Times and locations are all in local time. If anything changes, we’ll
+            update this page first.
+          </p>
+        </header>
+
+        <!-- Legend (optional) -->
+        <div class="schedule-legend">
+          <span class="legend-item legend-ceremony">Ceremony</span>
+          <span class="legend-item legend-reception">Reception</span>
+          <span class="legend-item legend-other">Other events</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- SCHEDULE LIST (rendered by main.js using SCHEDULE_ITEMS & VENUES) -->
+    <section class="page-section">
+      <div class="content-width">
+        <div id="schedule-list" class="schedule-list" data-schedule-list>
+          <!-- Populated by renderSchedule() in main.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- OPTIONAL NOTE SECTION -->
+    <section class="page-section section-alt">
+      <div class="content-width">
+        <h2>Arrival suggestions</h2>
+        <p>
+          If you are traveling from out of town, we recommend arriving by
+          <strong>Friday evening</strong> so that you have time to settle in
+          before the ceremony. See the
+          <a href="travel.html">travel and lodging</a> page for hotel blocks and
+          airport options.
+        </p>
+        <p>
+          If you can only attend the main events, please focus on the ceremony
+          and reception and let us know via your RSVP which events you plan to
+          join.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="content-width footer-inner">
+      <p>&copy; <span id="footer-year"></span> Nolan &amp; Greta</p>
+      <p class="footer-note">
+        For any last-minute questions about timing, please contact us directly.
+      </p>
+    </div>
+  </footer>
+
+  <!-- DATA SCRIPTS -->
+  <script src="assets/js/data.schedule.js"></script>
+  <!-- You can add other data files here if you want, but not required on this page -->
+  <!-- <script src="assets/js/data.travel.js"></script> -->
+  <!-- <script src="assets/js/data.faq.js"></script> -->
+  <!-- <script src="assets/js/data.party.js"></script> -->
+
+  <!-- BEHAVIOR SCRIPTS -->
+  <script src="assets/js/navbar.js"></script>
+  <script src="assets/js/modal.js"></script>
+  <script src="assets/js/countdown.js"></script>
+  <script src="assets/js/main.js"></script>
+
+  <!-- Footer year -->
+  <script>
+    (function () {
+      var el = document.getElementById("footer-year");
+      if (el) {
+        el.textContent = new Date().getFullYear();
+      }
+    })();
+  </script>
+</body>
+</html>

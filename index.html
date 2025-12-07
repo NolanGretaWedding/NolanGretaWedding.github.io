@@ -2,22 +2,284 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Our Wedding</title>
+  <title>Nolan & Greta — Our Wedding</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Core styles -->
+  <link rel="stylesheet" href="assets/css/base.css" />
+  <link rel="stylesheet" href="assets/css/layout.css" />
+  <link rel="stylesheet" href="assets/css/components.css" />
+  <link rel="stylesheet" href="assets/css/pages.css" />
+
+  <meta name="description" content="Information about the wedding of Nolan and Greta, including schedule, travel details, and RSVP." />
 </head>
-<body>
-  <header>
-    <h1>We’re getting married!</h1>
-    <p>DATE • CITY • VENUE</p>
+<body data-page="home">
+  <!-- HEADER / NAVBAR -->
+  <header class="site-header">
+    <div class="content-width header-inner">
+      <div class="logo">
+        <a href="index.html">
+          <span class="logo-mark">N &amp; G</span>
+          <span class="logo-text">Nolan &amp; Greta</span>
+        </a>
+      </div>
+
+      <!-- Mobile nav toggle -->
+      <button
+        class="nav-toggle"
+        data-nav-toggle
+        aria-label="Toggle navigation"
+        aria-expanded="false"
+      >
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <!-- Main navigation -->
+      <nav class="site-nav" data-nav>
+        <a href="index.html">Home</a>
+        <a href="schedule.html">Schedule</a>
+        <a href="travel.html">Travel</a>
+        <a href="rsvp.html">RSVP</a>
+        <a href="faq.html">FAQ</a>
+        <a href="party.html">Wedding Party</a>
+        <a href="story.html">Our Story</a>
+      </nav>
+    </div>
+
+    <!-- Mobile overlay -->
+    <div class="nav-overlay" data-nav-overlay></div>
   </header>
 
   <main>
-    <p>We’re so excited to celebrate with you. More details coming soon.</p>
+    <!-- HERO SECTION -->
+    <section class="hero page-section" id="top">
+      <div class="content-width hero-inner">
+        <div class="hero-copy">
+          <p class="hero-kicker">We are getting married</p>
+          <h1 class="hero-title">Nolan &amp; Greta</h1>
+          <p class="hero-meta">
+            <span class="hero-date">September 13, 2025</span>
+            <span class="hero-city">Example City, State</span>
+          </p>
+          <p class="hero-text">
+            We are very excited to celebrate with you. Below you will find the schedule,
+            travel details, and answers to common questions.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="rsvp.html">RSVP</a>
+            <a class="btn btn-outline" href="#details">View details</a>
+          </div>
+        </div>
 
-    <p>
-      <a href="rsvp.html">RSVP</a>
-      <!-- this will work once we create rsvp.html -->
-    </p>
+        <div class="hero-side">
+          <!-- Countdown lives here -->
+          <section
+            class="countdown-card"
+            id="countdown"
+            data-countdown
+            data-countdown-target="2025-09-13T16:00:00-04:00"
+          >
+            <h2 class="countdown-title">Countdown to the wedding</h2>
+            <div class="countdown-grid">
+              <div class="countdown-unit">
+                <span class="countdown-value" data-countdown-days>0</span>
+                <span class="countdown-label">Days</span>
+              </div>
+              <div class="countdown-unit">
+                <span class="countdown-value" data-countdown-hours>00</span>
+                <span class="countdown-label">Hours</span>
+              </div>
+              <div class="countdown-unit">
+                <span class="countdown-value" data-countdown-minutes>00</span>
+                <span class="countdown-label">Minutes</span>
+              </div>
+              <div class="countdown-unit">
+                <span class="countdown-value" data-countdown-seconds>00</span>
+                <span class="countdown-label">Seconds</span>
+              </div>
+            </div>
+            <p class="countdown-note">
+              Mark your calendar and start planning your trip.
+            </p>
+          </section>
+        </div>
+      </div>
+    </section>
+
+    <!-- QUICK DETAILS SECTION -->
+    <section class="page-section" id="details">
+      <div class="content-width">
+        <h2>Key details</h2>
+        <div class="card-grid">
+          <article class="card">
+            <h3>Ceremony</h3>
+            <p>
+              Saturday, September 13, 2025<br />
+              4:00 pm
+            </p>
+            <p>
+              Example Venue<br />
+              123 Example Street<br />
+              Example City, ST
+            </p>
+            <a class="card-link" href="schedule.html">View full schedule</a>
+          </article>
+
+          <article class="card">
+            <h3>Reception</h3>
+            <p>
+              Immediately following the ceremony
+            </p>
+            <p>
+              Same venue unless we specify otherwise in the schedule page.
+            </p>
+            <a class="card-link" href="schedule.html#reception">Go to reception details</a>
+          </article>
+
+          <article class="card">
+            <h3>Travel and lodging</h3>
+            <p>
+              We have collected airport, hotel, and local transportation recommendations
+              to make your planning easier.
+            </p>
+            <button class="btn-link" data-modal-open="travel-overview-modal">
+              Quick travel overview
+            </button>
+            <br />
+            <a class="card-link" href="travel.html">Travel and lodging page</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PREVIEW SECTIONS (OPTIONAL) -->
+    <section class="page-section section-alt" id="preview">
+      <div class="content-width">
+        <div class="section-header">
+          <h2>What you will find on the site</h2>
+          <p>
+            These sections are expanded further on their own pages so guests can
+            quickly find what they need.
+          </p>
+        </div>
+
+        <div class="preview-grid">
+          <article class="preview-item">
+            <h3>Schedule</h3>
+            <p>
+              Ceremony, cocktail hour, reception, and any weekend events all in one
+              clear timeline.
+            </p>
+            <a class="btn btn-small" href="schedule.html">Open schedule</a>
+          </article>
+
+          <article class="preview-item">
+            <h3>FAQ</h3>
+            <p>
+              Dress code, parking, children, plus any other practical details.
+            </p>
+            <a class="btn btn-small" href="faq.html">Read FAQ</a>
+          </article>
+
+          <article class="preview-item">
+            <h3>Wedding party</h3>
+            <p>
+              Meet the people standing with us on the day, plus a bit of context
+              for how we know each person.
+            </p>
+            <a class="btn btn-small" href="party.html">Meet the party</a>
+          </article>
+
+          <article class="preview-item">
+            <h3>Our story</h3>
+            <p>
+              A simple timeline of how we met, some milestones, and the proposal.
+            </p>
+            <a class="btn btn-small" href="story.html">Read our story</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA SECTION -->
+    <section class="page-section section-cta" id="rsvp-cta">
+      <div class="content-width cta-inner">
+        <div class="cta-text">
+          <h2>Please let us know if you can join us</h2>
+          <p>
+            We are planning food, seating, and logistics based on RSVPs. Please reply
+            by August 1, 2025 so we can prepare for you.
+          </p>
+        </div>
+        <div class="cta-actions">
+          <a class="btn btn-primary btn-large" href="rsvp.html">RSVP now</a>
+        </div>
+      </div>
+    </section>
   </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="content-width footer-inner">
+      <p>&copy; <span id="footer-year"></span> Nolan &amp; Greta</p>
+      <p class="footer-note">
+        If you have questions that are not covered here, please contact us directly.
+      </p>
+    </div>
+  </footer>
+
+  <!-- MODAL EXAMPLE USED BY modal.js -->
+  <div
+    class="modal"
+    data-modal
+    id="travel-overview-modal"
+    aria-hidden="true"
+    role="dialog"
+    aria-modal="true"
+  >
+    <div class="modal-backdrop" data-modal-close></div>
+    <div class="modal-dialog">
+      <button class="modal-close" data-modal-close aria-label="Close travel overview">
+        &times;
+      </button>
+      <div class="modal-content">
+        <h2>Travel overview</h2>
+        <p>
+          The travel page contains airport options, suggested hotels, and notes on
+          getting from the airport to the venue.
+        </p>
+        <p>
+          If you want to go straight to booking, the travel page will be the best
+          place to start.
+        </p>
+        <a class="btn btn-primary" href="travel.html">Go to travel page</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- DATA SCRIPTS (OPTIONAL BUT EXPECTED BY main.js) -->
+  <!-- You can create these files later and define SCHEDULE_ITEMS, etc. -->
+  <script src="assets/js/data.schedule.js"></script>
+  <script src="assets/js/data.travel.js"></script>
+  <script src="assets/js/data.faq.js"></script>
+  <script src="assets/js/data.party.js"></script>
+
+  <!-- BEHAVIOR SCRIPTS -->
+  <script src="assets/js/navbar.js"></script>
+  <script src="assets/js/modal.js"></script>
+  <script src="assets/js/countdown.js"></script>
+  <script src="assets/js/main.js"></script>
+
+  <!-- Small inline script for dynamic footer year (keeps main.js cleaner) -->
+  <script>
+    (function () {
+      var el = document.getElementById("footer-year");
+      if (el) {
+        el.textContent = new Date().getFullYear();
+      }
+    })();
+  </script>
 </body>
 </html>
