@@ -6,16 +6,16 @@
 
 // ISO-8601 string for the main ceremony start time.
 // Adjust to your actual date/time and timezone offset.
-var WEDDING_DATE_ISO = "2025-09-13T16:00:00-04:00";
+var WEDDING_DATE_ISO = "2026-09-16T16:00:00-04:00";
 
 // Venues referenced by schedule items via `locationId`.
 var VENUES = {
   "main-venue": {
     id: "main-venue",
-    name: "Example Wedding Venue",
-    address: "123 Example Street, Example City, ST 00000",
-    mapUrl: "https://maps.google.com/?q=123+Example+Street+Example+City+ST",
-    notes: "Ceremony and reception will both be held at this location."
+    name: "Stoneleigh Golf & Country Club",
+    address: "35271 Prestwick Ct, Round Hill, VA 20141",
+    mapUrl: "https://www.google.com/maps/place/Stoneleigh+Golf+and+Country+Club/@39.1244018,-77.7842625,799m/data=!3m2!1e3!4b1!4m6!3m5!1s0x89b60e59dbe58f39:0x705e2b936fd84250!8m2!3d39.1243977!4d-77.7816822!16s%2Fg%2F1tcwmfqb?entry=ttu&g_ep=EgoyMDI1MTIwMi4wIKXMDSoASAFQAw%3D%3D",
+    notes: "Ceremony, cocktail hour, and reception will be held at this location."
   },
   "welcome-dinner-location": {
     id: "welcome-dinner-location",
@@ -39,15 +39,15 @@ var VENUES = {
 var SCHEDULE_ITEMS = [
   // -------- Friday (optional events) --------
   {
-    id: "welcome-dinner",
+    id: "rehearsal-dinner",
     type: "other", // "ceremony" | "reception" | "other"
     dayLabel: "Friday",
-    date: "Friday, September 12, 2025",
-    time: "7:00 pm",
-    title: "Welcome dinner",
-    locationId: "welcome-dinner-location",
+    date: "Friday, September 18, 2026",
+    time: "6:00 pm",
+    title: "Rehearsal dinner",
+    locationId: "rehearsal-dinner-location",
     description:
-      "A casual dinner for family and out-of-town guests. Totally optional—come if your travel schedule allows."
+      "A casual rehearsal dinner at Franklin Park in preparation for the Saturday wedding."
   },
 
   // -------- Saturday (wedding day) --------
@@ -66,7 +66,7 @@ var SCHEDULE_ITEMS = [
     id: "guest-arrival",
     type: "other",
     dayLabel: "Saturday",
-    date: "Saturday, September 13, 2025",
+    date: "Saturday, September 19, 2026",
     time: "3:30 pm",
     title: "Guest arrival & seating",
     locationId: "main-venue",
@@ -119,17 +119,17 @@ var SCHEDULE_ITEMS = [
   },
 
   // -------- Sunday (optional brunch) --------
-  {
-    id: "farewell-brunch",
-    type: "other",
-    dayLabel: "Sunday",
-    date: "Sunday, September 14, 2025",
-    time: "10:00 am",
-    title: "Farewell brunch",
-    locationId: "farewell-brunch-location",
-    description:
-      "A casual brunch for anyone still in town. Come say goodbye and swap stories from the night before."
-  }
+//   {
+//     id: "farewell-brunch",
+//     type: "other",
+//     dayLabel: "Sunday",
+//     date: "Sunday, September 14, 2025",
+//     time: "10:00 am",
+//     title: "Farewell brunch",
+//     locationId: "farewell-brunch-location",
+//     description:
+//       "A casual brunch for anyone still in town. Come say goodbye and swap stories from the night before."
+//   }
 ];
 
 // If you ever want to group or filter by type/day in the UI,
