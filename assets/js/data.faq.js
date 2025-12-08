@@ -8,12 +8,12 @@ var FAQ_ITEMS = [
   {
     question: "What is the dress code?",
     answer:
-      "Semi-formal. Jackets and dresses are great, but we want you to be comfortable. Think along the lines of what you would wear to a nice evening out."
+      "The dress code is semi-formal/cocktail attire. We encourage guests to dress comfortably while still looking polished. Think dresses, skirts, dress pants, button-down shirts, and blazers. Please consider the outdoor setting when choosing your outfit."
   },
   {
     question: "Are children invited?",
     answer:
-      "We love your kids, but the ceremony and reception will be an adults-focused event unless otherwise specified on your invitation. If you are unsure, please reach out so we can clarify."
+      "The ceremony and reception will be an adults-focused event unless otherwise specified on your invitation. If you are unsure, please reach out so we can clarify."
   },
   {
     question: "Can I bring a plus-one?",
@@ -33,7 +33,7 @@ var FAQ_ITEMS = [
   {
     question: "Where should I stay?",
     answer:
-      "We have a few suggested hotels and lodging options listed on the Travel page, including any room blocks we may have reserved. You are also welcome to book other accommodations that work better for you."
+      "We have a few suggested hotels and lodging options listed on the Travel page. Please book early, as accommodations in the area can fill up quickly around the wedding date."
   },
   {
     question: "Is there parking at the venue?",
@@ -43,7 +43,7 @@ var FAQ_ITEMS = [
   {
     question: "Will the events be indoors or outdoors?",
     answer:
-      "Our plan is for the ceremony to be [indoors/outdoors] and the reception to be [indoors/outdoors], with a weather backup plan in place. We will update the site if anything changes based on the forecast."
+      "Everything will primarily take place outdoors, with some covered areas available. Please check the weather forecast as the date approaches and dress accordingly. An indoor alternative may be provided if weather is not favorable."
   },
   {
     question: "I have dietary restrictions. What should I do?",
@@ -53,6 +53,6 @@ var FAQ_ITEMS = [
   {
     question: "Are you registered anywhere for gifts?",
     answer:
-      "Your presence is the most important thing to us. If you would still like to give a gift, we will share registry information separately. Feel no pressure—celebrating with you is more than enough."
+      "The registry information can be found on the Registry page. Gifts may be sent directly to our home address listed there. Thank you!"
   }
 ];
