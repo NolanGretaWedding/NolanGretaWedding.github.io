@@ -99,10 +99,55 @@ body[data-page="home"] .hero-text {
 
 /* Schedule page */
 
-body[data-page="schedule"] .page-section:first-of-type {
-  padding-top: var(--space-2xl);
+/* Top schedule "bar" with background image */
+body[data-page="schedule"] .schedule-hero {
+  position: relative;
+  padding-top: var(--space-3xl);
+  padding-bottom: var(--space-3xl);
+  background-image: url("../img/schedule-hero.jpg"); /* put your schedule image here */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  color: #fdfaf6;
+  overflow: hidden;
 }
 
+/* Dark overlay so text is readable on the schedule image */
+body[data-page="schedule"] .schedule-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.25),
+    rgba(0, 0, 0, 0.55)
+  );
+  z-index: 0;
+}
+
+body[data-page="schedule"] .schedule-hero .page-header,
+body[data-page="schedule"] .schedule-hero .schedule-legend {
+  position: relative;
+  z-index: 1;
+}
+
+body[data-page="schedule"] .schedule-hero .page-header h1 {
+  color: #ffffff;
+}
+
+body[data-page="schedule"] .schedule-hero .page-header .page-kicker,
+body[data-page="schedule"] .schedule-hero .page-header .page-intro {
+  color: #f0ece5;
+}
+
+/* Make legend chips stand out on the image */
+body[data-page="schedule"] .schedule-legend .legend-item {
+  background-color: rgba(255, 255, 255, 0.16);
+  border-color: rgba(255, 255, 255, 0.5);
+  color: #fdfaf6;
+}
+
+/* General schedule header size */
 body[data-page="schedule"] .page-header h1 {
   font-size: var(--font-size-2xl);
 }
