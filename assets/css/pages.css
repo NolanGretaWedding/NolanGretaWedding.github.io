@@ -167,9 +167,116 @@ body[data-page="rsvp"] .rsvp-iframe-wrapper {
 
 /* Travel page */
 
+/* Travel hero with image backdrop */
+body[data-page="travel"] .travel-hero {
+  position: relative;
+  padding-top: var(--space-3xl);
+  padding-bottom: var(--space-3xl);
+  background-image: url("../img/travel-hero.jpg"); /* add this image */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  color: #fdfaf6;
+  overflow: hidden;
+}
+
+body[data-page="travel"] .travel-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.25),
+    rgba(0, 0, 0, 0.55)
+  );
+  z-index: 0;
+}
+
+body[data-page="travel"] .travel-hero .page-header,
+body[data-page="travel"] .travel-hero .travel-facts-grid {
+  position: relative;
+  z-index: 1;
+}
+
+body[data-page="travel"] .travel-hero h1 {
+  color: #ffffff;
+}
+
+body[data-page="travel"] .travel-hero .page-kicker,
+body[data-page="travel"] .travel-hero .travel-intro {
+  color: #f0ece5;
+}
+
 body[data-page="travel"] .travel-intro {
   max-width: 40rem;
 }
+
+/* Quick facts row under hero copy */
+body[data-page="travel"] .travel-facts-grid {
+  margin-top: var(--space-lg);
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space-md);
+}
+
+@media (min-width: 768px) {
+  body[data-page="travel"] .travel-facts-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+body[data-page="travel"] .travel-fact-card {
+  background-color: rgba(10, 10, 10, 0.32);
+  border-radius: var(--radius-lg);
+  padding: var(--space-md);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.35);
+}
+
+body[data-page="travel"] .travel-fact-card h2 {
+  font-size: var(--font-size-lg);
+  margin-bottom: 0.35rem;
+  color: #ffffff;
+}
+
+body[data-page="travel"] .travel-fact-card p {
+  margin-bottom: 0.4rem;
+}
+
+body[data-page="travel"] .travel-fact-card .travel-fact-meta {
+  font-size: 0.85rem;
+  opacity: 0.9;
+}
+
+body[data-page="travel"] .travel-fact-card a {
+  color: #ffffff;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+}
+
+/* Little “pills” for travel options */
+body[data-page="travel"] .travel-badges {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+body[data-page="travel"] .travel-badge {
+  font-size: 0.8rem;
+  padding: 0.25rem 0.6rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  background-color: rgba(0, 0, 0, 0.15);
+}
+
+/* Note card at bottom of hotels section */
+body[data-page="travel"] .travel-note-card {
+  margin-top: var(--space-lg);
+}
+
 
 /* FAQ page */
 

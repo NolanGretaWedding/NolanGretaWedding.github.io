@@ -54,13 +54,13 @@
         <a href="story.html">Our Story</a>
         <a href="registry.html">Registry</a>
       </nav>
-      
     </div>
     <div class="nav-overlay" data-nav-overlay></div>
   </header>
 
   <main>
-    <section class="page-section">
+    <!-- TRAVEL HERO -->
+    <section class="page-section travel-hero">
       <div class="content-width">
         <header class="page-header">
           <p class="page-kicker">Getting here</p>
@@ -71,16 +71,58 @@
             getting around once you arrive.
           </p>
         </header>
+
+        <div class="travel-facts-grid">
+          <article class="travel-fact-card">
+            <h2>Venue</h2>
+            <p>
+              Stoneleigh Golf &amp; Country Club<br />
+              Round Hill, Virginia
+            </p>
+            <p class="travel-fact-meta">
+              <a
+                href="https://maps.app.goo.gl/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Open in Maps
+              </a>
+            </p>
+          </article>
+
+          <article class="travel-fact-card">
+            <h2>Recommended arrival</h2>
+            <p>
+              We suggest arriving by <strong>Friday evening</strong> so you can
+              settle in and enjoy the weekend.
+            </p>
+            <p class="travel-fact-meta">
+              See the schedule page for exact timing.
+            </p>
+          </article>
+
+          <article class="travel-fact-card">
+            <h2>Getting around</h2>
+            <ul class="travel-badges">
+              <li class="travel-badge">Rental car friendly</li>
+              <li class="travel-badge">Rideshare to some areas</li>
+              <li class="travel-badge">Free parking at venue</li>
+            </ul>
+          </article>
+        </div>
       </div>
     </section>
 
+    <!-- AIRPORTS -->
     <section class="page-section section-alt">
       <div class="content-width">
-        <h2>Airports</h2>
-        <p class="text-muted">
-          These are the main airports that make sense for the venue. Drive times are
-          approximate and can vary with traffic.
-        </p>
+        <div class="section-header">
+          <h2>Airports</h2>
+          <p class="text-muted">
+            These are the main airports that make sense for the venue. Drive times are
+            approximate and can vary with traffic.
+          </p>
+        </div>
 
         <div class="card-grid" data-travel-airports>
           <!-- Filled by renderTravel() using TRAVEL_AIRPORTS -->
@@ -88,23 +130,33 @@
       </div>
     </section>
 
+    <!-- HOTELS -->
     <section class="page-section">
       <div class="content-width">
-        <h2>Hotels</h2>
-        <p class="text-muted">
-          We have listed a few options at different price points and distances from
-          the venue. If we have a room block, those hotels will be marked clearly.
-        </p>
+        <div class="section-header">
+          <h2>Hotels</h2>
+          <p class="text-muted">
+            We have listed a few options at different price points and distances from
+            the venue. If we have a room block, those hotels will be marked clearly.
+          </p>
+        </div>
 
         <div class="card-grid" data-travel-hotels>
           <!-- Filled by renderTravel() using TRAVEL_HOTELS -->
         </div>
 
-        <p class="text-muted" style="margin-top: 1rem; font-size: 0.85rem;">
-          If you prefer to book something else (vacation rentals, other hotels),
-          feel free. The suggestions here are meant to make planning easier, not
-          required.
-        </p>
+        <div class="card travel-note-card">
+          <h3>Other options</h3>
+          <p>
+            If you prefer vacation rentals or other hotels, feel free to choose what
+            works best for you. The suggestions here are meant to make planning
+            easier, not required.
+          </p>
+          <p class="text-muted" style="margin-top: 0.5rem; font-size: 0.85rem;">
+            If you’re unsure whether a location is convenient for the venue, you’re
+            welcome to send it to us and we’ll give you a quick sanity check.
+          </p>
+        </div>
       </div>
     </section>
   </main>
