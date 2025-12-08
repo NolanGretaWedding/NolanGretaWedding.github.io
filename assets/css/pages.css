@@ -4,116 +4,162 @@
 
 /* Home page */
 
+/* Hero with engagement-photo backdrop and subtle parallax */
 body[data-page="home"] .hero {
-    padding-top: var(--space-3xl);
-  }
-  
-  body[data-page="home"] .hero-text {
-    max-width: 32rem;
-    font-size: var(--font-size-md);
-  }
-  
-  /* Schedule page */
-  
-  body[data-page="schedule"] .page-section:first-of-type {
+  position: relative;
+  color: #fdfaf6;
+  padding-top: var(--space-3xl);
+  padding-bottom: var(--space-3xl);
+  background-image: url("../img/engagement-hero.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: calc(50% + var(--hero-offset-x, 0px))
+                      calc(50% + var(--hero-offset-y, 0px));
+  overflow: hidden;
+}
+
+/* Dark gradient overlay so text stays readable */
+body[data-page="home"] .hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.25),
+    rgba(0, 0, 0, 0.55)
+  );
+  z-index: 0;
+}
+
+/* Ensure hero content sits above overlay */
+body[data-page="home"] .hero-inner {
+  position: relative;
+  z-index: 1;
+}
+
+body[data-page="home"] .hero-title {
+  color: #ffffff;
+}
+
+body[data-page="home"] .hero-text,
+body[data-page="home"] .hero-meta,
+body[data-page="home"] .hero-kicker {
+  color: #f0ece5;
+}
+
+/* Optional: tighten hero on very small screens */
+@media (max-width: 480px) {
+  body[data-page="home"] .hero {
     padding-top: var(--space-2xl);
+    padding-bottom: var(--space-2xl);
   }
-  
-  body[data-page="schedule"] .page-header h1 {
-    font-size: var(--font-size-2xl);
-  }
-  
-  /* RSVP page (placeholder; you can add more later) */
-  
-  body[data-page="rsvp"] .page-section {
-    padding-top: var(--space-2xl);
-  }
-  
-  body[data-page="rsvp"] .rsvp-iframe-wrapper {
-    border-radius: var(--radius-md);
-    overflow: hidden;
-    box-shadow: var(--shadow-soft);
-    background-color: var(--color-surface);
-  }
-  
-  /* Travel page (optional future styles) */
-  
-  body[data-page="travel"] .travel-intro {
-    max-width: 40rem;
-  }
-  
-  /* FAQ page */
-  
-  body[data-page="faq"] #faq-list {
-    margin-top: var(--space-md);
-  }
-  
-  /* Party page */
-  
+}
+
+body[data-page="home"] .hero-text {
+  max-width: 32rem;
+  font-size: var(--font-size-md);
+}
+
+/* Schedule page */
+
+body[data-page="schedule"] .page-section:first-of-type {
+  padding-top: var(--space-2xl);
+}
+
+body[data-page="schedule"] .page-header h1 {
+  font-size: var(--font-size-2xl);
+}
+
+/* RSVP page */
+
+body[data-page="rsvp"] .page-section {
+  padding-top: var(--space-2xl);
+}
+
+body[data-page="rsvp"] .rsvp-iframe-wrapper {
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-soft);
+  background-color: var(--color-surface);
+}
+
+/* Travel page */
+
+body[data-page="travel"] .travel-intro {
+  max-width: 40rem;
+}
+
+/* FAQ page */
+
+body[data-page="faq"] #faq-list {
+  margin-top: var(--space-md);
+}
+
+/* Party page */
+
+body[data-page="party"] .party-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space-md);
+}
+
+@media (min-width: 640px) {
   body[data-page="party"] .party-grid {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr);
-    gap: var(--space-md);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
-  
-  @media (min-width: 640px) {
-    body[data-page="party"] .party-grid {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
+}
+
+/* Our story page */
+
+body[data-page="story"] .story-timeline {
+  border-left: 2px solid var(--color-border-subtle);
+  padding-left: var(--space-md);
+  margin-top: var(--space-md);
+}
+
+body[data-page="story"] .story-event {
+  position: relative;
+  margin-bottom: var(--space-md);
+}
+
+body[data-page="story"] .story-event::before {
+  content: "";
+  position: absolute;
+  left: -0.6rem;
+  top: 0.45rem;
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  background-color: var(--color-accent);
+}
+
+/* Section header */
+
+.section-header {
+  max-width: 40rem;
+}
+
+.section-header h2 {
+  margin-bottom: 0.4em;
+}
+
+/* CTA tweaks */
+
+.section-cta .cta-text p {
+  max-width: 32rem;
+}
+
+/* Responsive polish */
+
+@media (max-width: 480px) {
+  .hero-actions {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
   }
-  
-  /* Our story page (if you decide to build a timeline) */
-  
-  body[data-page="story"] .story-timeline {
-    border-left: 2px solid var(--color-border-subtle);
-    padding-left: var(--space-md);
-    margin-top: var(--space-md);
+
+  .hero-actions .btn {
+    width: 100%;
+    justify-content: center;
   }
-  
-  body[data-page="story"] .story-event {
-    position: relative;
-    margin-bottom: var(--space-md);
-  }
-  
-  body[data-page="story"] .story-event::before {
-    content: "";
-    position: absolute;
-    left: -0.6rem;
-    top: 0.45rem;
-    width: 10px;
-    height: 10px;
-    border-radius: 999px;
-    background-color: var(--color-accent);
-  }
-  
-  /* Section header */
-  
-  .section-header {
-    max-width: 40rem;
-  }
-  
-  .section-header h2 {
-    margin-bottom: 0.4em;
-  }
-  
-  /* CTA tweaks */
-  
-  .section-cta .cta-text p {
-    max-width: 32rem;
-  }
-  
-  /* Responsive polish */
-  
-  @media (max-width: 480px) {
-    .hero-actions {
-      display: flex;
-      flex-direction: column;
-      gap: var(--space-xs);
-    }
-  
-    .hero-actions .btn {
-      width: 100%;
-      justify-content: center;
-    }
-  }
-  
+}
