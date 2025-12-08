@@ -17,7 +17,7 @@ var PARTY_MEMBERS = [
     role: "Groom",
     photo: "assets/img/party/nolan.jpg", // optional, use null or "" if you don't have it yet
     bio:
-      "Short bio about Nolan. You can mention how he spends his time, how he met Greta, or a fun detail guests might enjoy."
+      "Placeholder"
   },
   {
     id: "person-greta",
@@ -25,26 +25,26 @@ var PARTY_MEMBERS = [
     role: "Bride",
     photo: "assets/img/party/greta.jpg",
     bio:
-      "Short bio about Greta. Feel free to keep it light and fun—this is just a way for guests to connect names and faces."
+      "Placeholder"
   },
 
   // --- Example wedding party entries: edit / replace as needed ---
 
   {
     id: "person-best-man",
-    name: "First Last",
+    name: "Casey Hughes",
     role: "Best man",
-    photo: "assets/img/party/best-man.jpg",
+    photo: "assets/img/party/casey.jpg",
     bio:
-      "Nolan met [Name] in [context—school, work, childhood]. They have been close friends ever since and have more stories than can reasonably fit on this page."
+      "Placeholder"
   },
   {
     id: "person-maid-of-honor",
-    name: "First Last",
+    name: "Haley Frankovich",
     role: "Maid of honor",
-    photo: "assets/img/party/maid-of-honor.jpg",
+    photo: "assets/img/party/haley.jpg",
     bio:
-      "Greta and [Name] have been inseparable since [time/place]. She has been there for every major moment leading up to the wedding."
+      "Placeholder"
   },
   {
     id: "person-groomsman-1",
