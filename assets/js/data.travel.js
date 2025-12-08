@@ -7,28 +7,28 @@
 // Airports that make sense for reaching the venue.
 var TRAVEL_AIRPORTS = [
   {
-    code: "ABC",
-    name: "ABC International Airport",
-    drive: "25–35 minutes",
+    code: "IAD",
+    name: "Dulles International Airport",
+    drive: "30–40 minutes",
     notes:
-      "This is the closest major airport to the venue and usually the easiest option. Most major airlines fly here.",
-    url: "https://www.example.com/airport-abc"
+      "This is the closest major airport to the venue and usually the easiest option.",
+    url: "https://www.flydulles.com/"
   },
   {
-    code: "DEF",
-    name: "DEF Regional Airport",
-    drive: "45–60 minutes",
+    code: "DCA",
+    name: "Ronald Reagan Washington National Airport",
+    drive: "50–70 minutes",
     notes:
       "Smaller airport that can be a good option if you find a convenient flight or better price.",
-    url: "https://www.example.com/airport-def"
+    url: "https://www.flyreagan.com/"
   },
   {
-    code: "GHI",
-    name: "GHI International Airport",
+    code: "BWI",
+    name: "Baltimore/Washington International Thurgood Marshall Airport",
     drive: "1.5–2 hours",
     notes:
-      "Larger hub with more flight options; may be worth it if you are coming from far away and want more flexibility.",
-    url: "https://www.example.com/airport-ghi"
+      "Southwest hub and sometimes has good deals, but it's a longer drive to the venue.",
+    url: "https://bwiairport.com/"
   }
 ];
 
@@ -36,45 +36,43 @@ var TRAVEL_AIRPORTS = [
 // You can add fields like `blockCode` or `blockDeadline` if you want.
 var TRAVEL_HOTELS = [
   {
-    name: "Example Hotel Downtown",
-    address: "101 Main Street, Example City, ST 00000",
-    phone: "(000) 111-2222",
-    distance: "10 minutes from venue",
-    notes:
-      "Modern hotel in the downtown area with lots of restaurants and coffee shops nearby.",
-    url: "https://www.example.com/hotel-downtown",
-    hasRoomBlock: true,
-    blockName: "Nolan & Greta Wedding",
-    blockDeadline: "August 1, 2025"
-  },
-  {
-    name: "Example Inn near Venue",
-    address: "55 Garden Road, Example City, ST 00000",
-    phone: "(000) 333-4444",
+    name: "The Windswept Inn",
+    address: "18104 Calumet Ln, Round Hill, VA 20141",
+    phone: "(703) 314-2313",
     distance: "5 minutes from venue",
     notes:
-      "Smaller inn very close to the venue; a good option if you prefer to minimize driving.",
-    url: "https://www.example.com/inn-near-venue",
+      "Placeholder",
+    url: "placeholder",
     hasRoomBlock: false
   },
   {
-    name: "Budget Suites",
-    address: "200 Value Lane, Example City, ST 00000",
-    phone: "(000) 555-6666",
-    distance: "15 minutes from venue",
+    name: "Hotel 2",
+    address: "Placeholder",
+    phone: "Placeholder",
+    distance: "Placeholder",
     notes:
-      "More budget-friendly option with simple rooms. Good if you mainly need a place to sleep.",
-    url: "https://www.example.com/budget-suites",
+      "Placeholder",
+    url: "Placeholder",
     hasRoomBlock: false
   },
   {
-    name: "Boutique Hotel Riverside",
-    address: "12 Riverfront Drive, Example City, ST 00000",
-    phone: "(000) 777-8888",
-    distance: "20 minutes from venue",
+    name: "Hotel 3",
+    address: "Placeholder",
+    phone: "Placeholder",
+    distance: "Placeholder",
     notes:
-      "Charming boutique hotel by the river. Slightly farther from the venue but nice views and surroundings.",
-    url: "https://www.example.com/boutique-riverside",
+      "Placeholder",
+    url: "Placeholder",
+    hasRoomBlock: false
+  },
+  {
+    name: "Hotel 4",
+    address: "Placeholder",
+    phone: "Placeholder",
+    distance: "Placeholder",
+    notes:
+      "Placeholder",
+    url: "Placeholder",
     hasRoomBlock: false
   }
 ];
