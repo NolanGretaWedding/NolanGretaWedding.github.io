@@ -14,23 +14,23 @@ var VENUES = {
     id: "main-venue",
     name: "Stoneleigh Golf & Country Club",
     address: "35271 Prestwick Ct, Round Hill, VA 20141",
-    mapUrl: "https://www.google.com/maps/place/Stoneleigh+Golf+and+Country+Club/@39.1244018,-77.7842625,799m/data=!3m2!1e3!4b1!4m6!3m5!1s0x89b60e59dbe58f39:0x705e2b936fd84250!8m2!3d39.1243977!4d-77.7816822!16s%2Fg%2F1tcwmfqb?entry=ttu&g_ep=EgoyMDI1MTIwMi4wIKXMDSoASAFQAw%3D%3D",
+    mapUrl: "https://maps.app.goo.gl/EKHSDG4gvmL983jW8",
     notes: "Ceremony, cocktail hour, and reception will be held at this location."
   },
-  "welcome-dinner-location": {
-    id: "welcome-dinner-location",
-    name: "Welcome Dinner Restaurant",
-    address: "456 Dinner Lane, Example City, ST 00000",
-    mapUrl: "https://maps.google.com/?q=456+Dinner+Lane+Example+City+ST",
+  "rehearsal-dinner-location": {
+    id: "rehearsal-dinner-location",
+    name: "Franklin Park",
+    address: "36441 Blueridge View Ln, Purcellville, VA 20132",
+    mapUrl: "https://maps.app.goo.gl/ennG2uYuYX7HxYfp9",
     notes: "Informal dinner for out-of-town guests and family."
   },
-  "farewell-brunch-location": {
-    id: "farewell-brunch-location",
-    name: "Farewell Brunch Spot",
-    address: "789 Brunch Avenue, Example City, ST 00000",
-    mapUrl: "https://maps.google.com/?q=789+Brunch+Avenue+Example+City+ST",
-    notes: "Optional brunch for anyone still in town."
-  }
+  // "farewell-brunch-location": {
+  //   id: "farewell-brunch-location",
+  //   name: "Farewell Brunch Spot",
+  //   address: "Sunday Brunch Address",
+  //   mapUrl: "link for maps to brunch location",
+  //   notes: "Optional brunch for anyone still in town."
+  // }
 };
 
 // Schedule items for the weekend.
@@ -55,7 +55,7 @@ var SCHEDULE_ITEMS = [
     id: "getting-ready",
     type: "other",
     dayLabel: "Saturday",
-    date: "Saturday, September 13, 2025",
+    date: "Saturday, September 19, 2026",
     time: "Morning / early afternoon",
     title: "Getting ready",
     locationId: "main-venue",
@@ -77,45 +77,45 @@ var SCHEDULE_ITEMS = [
     id: "ceremony",
     type: "ceremony",
     dayLabel: "Saturday",
-    date: "Saturday, September 13, 2025",
+    date: "Saturday, September 19, 2026",
     time: "4:00 pm",
     title: "Ceremony",
     locationId: "main-venue",
     description:
-      "Our wedding ceremony. Please silence your phones and enjoy the moment with us."
+      "Wedding ceremony will begin promptly at 4:00pm in the courtyard."
   },
   {
     id: "cocktail-hour",
     type: "reception",
     dayLabel: "Saturday",
-    date: "Saturday, September 13, 2025",
-    time: "5:00 pm",
+    date: "Saturday, September 19, 2026",
+    time: "4:30 pm",
     title: "Cocktail hour",
     locationId: "main-venue",
     description:
-      "Drinks and light bites while we wrap up family photos and transition into the reception."
+      "Drinks and horderves will be served by the barn while the couple takes photos."
   },
   {
     id: "reception",
     type: "reception",
     dayLabel: "Saturday",
-    date: "Saturday, September 13, 2025",
-    time: "6:00 pm",
+    date: "Saturday, September 19, 2026",
+    time: "5:30 pm",
     title: "Reception",
     locationId: "main-venue",
     description:
-      "Dinner, toasts, dancing, and celebrating together. We can’t wait to party with you."
+      "Taco bar, open bar with beer and wine, dancing, and merriment to follow cocktail hour."
   },
   {
     id: "sendoff",
     type: "other",
     dayLabel: "Saturday",
-    date: "Saturday, September 13, 2025",
-    time: "10:30 pm",
+    date: "Saturday, September 19, 2026",
+    time: "10:00 pm",
     title: "Send-off",
     locationId: "main-venue",
     description:
-      "Approximate end time. Final details (sparkler exit or equivalent) will be shared closer to the date."
+      "Approximate end time. Final details will be shared closer to the date."
   },
 
   // -------- Sunday (optional brunch) --------
