@@ -19,5 +19,7 @@ var INVITED_NAMES = [
   "Jakob Summers",
   "Faith Summers",
   "Ammon Harteis",
-  "Merrill Harteis"
+  "Merrill Harteis",
+  "Alex Fox",
+  "Alexander Fox"
 ];
