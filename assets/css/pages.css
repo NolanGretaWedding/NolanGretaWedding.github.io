@@ -46,6 +46,17 @@ body[data-page="home"] .hero-kicker {
   color: #f0ece5;
 }
 
+/* Make just the date and city in the hero black */
+body[data-page="home"] .hero-meta .hero-date,
+body[data-page="home"] .hero-meta .hero-city {
+  color: #000000;
+}
+
+/* Make the countdown text black on the home hero */
+body[data-page="home"] .countdown-card {
+  color: #000000;
+}
+
 /* Optional: tighten hero on very small screens */
 @media (max-width: 480px) {
   body[data-page="home"] .hero {
