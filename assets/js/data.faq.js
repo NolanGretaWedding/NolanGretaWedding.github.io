@@ -38,7 +38,7 @@ var FAQ_ITEMS = [
   {
     question: "Is there parking at the venue?",
     answer:
-      "Yes, there will be parking on site or very close to the venue. We will share specific instructions—such as which entrance to use—on the Travel page closer to the date."
+      "Yes, there will be parking on site or very close to the venue."
   },
   {
     question: "Will the events be indoors or outdoors?",
