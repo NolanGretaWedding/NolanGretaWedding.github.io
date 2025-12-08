@@ -9,29 +9,6 @@
     return document.body.dataset.page || null;
   }
 
-  // Interactive hero background (parallax-ish) on home page
-  function initHeroInteractive() {
-    var hero = document.querySelector(".hero[data-hero-interactive]");
-    if (!hero) return;
-
-    // Initial offsets
-    hero.style.setProperty("--hero-offset-x", "0px");
-    hero.style.setProperty("--hero-offset-y", "0px");
-
-    hero.addEventListener("mousemove", function (event) {
-      var rect = hero.getBoundingClientRect();
-      var relX = (event.clientX - rect.left) / rect.width - 0.5;  // -0.5..0.5
-      var relY = (event.clientY - rect.top) / rect.height - 0.5; // -0.5..0.5
-
-      // Tweak 20 for more/less motion
-      var offsetX = (relX * 20).toFixed(1) + "px";
-      var offsetY = (relY * 20).toFixed(1) + "px";
-
-      hero.style.setProperty("--hero-offset-x", offsetX);
-      hero.style.setProperty("--hero-offset-y", offsetY);
-    });
-  }
-
   // ---------- RENDERERS ----------
 
   function renderSchedule() {
@@ -304,9 +281,6 @@
     }
 
     switch (page) {
-      case "home":
-        initHeroInteractive();
-        break;
       case "schedule":
         renderSchedule();
         break;

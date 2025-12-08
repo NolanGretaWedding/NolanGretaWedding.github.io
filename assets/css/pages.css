@@ -4,7 +4,7 @@
 
 /* Home page */
 
-/* Hero with engagement-photo backdrop and subtle parallax */
+/* Hero with engagement-photo backdrop (static) */
 body[data-page="home"] .hero {
   position: relative;
   color: #fdfaf6;
@@ -13,8 +13,7 @@ body[data-page="home"] .hero {
   background-image: url("../img/engagement-hero.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: calc(50% + var(--hero-offset-x, 0px))
-                      calc(50% + var(--hero-offset-y, 0px));
+  background-position: center center;
   overflow: hidden;
 }
 
