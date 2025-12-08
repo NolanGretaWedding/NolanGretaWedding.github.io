@@ -1,100 +1,94 @@
 // assets/js/navbar.js
-// Handles mobile nav toggle + "active" link highlighting.
+// Fancy, sticky, glassy, mobile-friendly navbar.
 
 (function () {
-    "use strict";
-  
-    function highlightActiveLink() {
-      const nav = document.querySelector("[data-nav]");
-      if (!nav) return;
-  
-      const links = nav.querySelectorAll("a[href]");
-      if (!links.length) return;
-  
-      const currentPath = window.location.pathname.split("/").pop() || "index.html";
-  
-      links.forEach((link) => {
-        const href = link.getAttribute("href");
-        if (!href) return;
-  
-        // Handle absolute / relative links.
-        const hrefPath = href.split("/").pop();
-  
-        // index.html vs root special case.
-        const isHome =
-          (currentPath === "" || currentPath === "index.html") &&
-          (hrefPath === "" || hrefPath === "index.html");
-  
-        const isSamePage = hrefPath === currentPath;
-  
-        if (isHome || isSamePage) {
-          link.classList.add("is-active");
-          link.setAttribute("aria-current", "page");
-        } else {
-          link.classList.remove("is-active");
-          link.removeAttribute("aria-current");
-        }
-      });
+  "use strict";
+
+  function initNavbar() {
+    var header = document.querySelector(".site-header");
+    var nav = header ? header.querySelector("[data-nav]") : null;
+    var toggle = header ? header.querySelector("[data-nav-toggle]") : null;
+    var overlay = document.querySelector("[data-nav-overlay]");
+    if (!header || !nav || !toggle || !overlay) return;
+
+    var navLinks = Array.prototype.slice.call(nav.querySelectorAll("a[href]"));
+    var isOpen = false;
+
+    function setNav(open) {
+      isOpen = open;
+
+      header.classList.toggle("is-nav-open", open);
+      overlay.classList.toggle("is-active", open);
+      document.body.classList.toggle("no-scroll", open);
+
+      toggle.setAttribute("aria-expanded", open ? "true" : "false");
     }
-  
-    function setupMobileToggle() {
-      const toggle = document.querySelector("[data-nav-toggle]");
-      const nav = document.querySelector("[data-nav]");
-      const overlay = document.querySelector("[data-nav-overlay]");
-  
-      if (!toggle || !nav) return;
-  
-      function openNav() {
-        nav.classList.add("is-open");
-        toggle.classList.add("is-open");
-        if (overlay) overlay.classList.add("is-visible");
-        document.body.classList.add("nav-open");
+
+    // Toggle button
+    toggle.addEventListener("click", function () {
+      setNav(!isOpen);
+    });
+
+    // Overlay click closes nav
+    overlay.addEventListener("click", function () {
+      setNav(false);
+    });
+
+    // Clicking a nav link closes nav (on mobile)
+    nav.addEventListener("click", function (event) {
+      var link = event.target.closest("a");
+      if (!link) return;
+      setNav(false);
+    });
+
+    // Close nav if resized to desktop
+    window.addEventListener("resize", function () {
+      if (window.innerWidth >= 768 && isOpen) {
+        setNav(false);
       }
-  
-      function closeNav() {
-        nav.classList.remove("is-open");
-        toggle.classList.remove("is-open");
-        if (overlay) overlay.classList.remove("is-visible");
-        document.body.classList.remove("nav-open");
-      }
-  
-      toggle.addEventListener("click", () => {
-        const isOpen = nav.classList.contains("is-open");
-        if (isOpen) {
-          closeNav();
-        } else {
-          openNav();
-        }
-      });
-  
-      if (overlay) {
-        overlay.addEventListener("click", closeNav);
-      }
-  
-      // Close nav when clicking a link (useful on mobile).
-      nav.addEventListener("click", (event) => {
-        const link = event.target.closest("a[href]");
-        if (!link) return;
-        // Only close if it's an internal link.
-        const href = link.getAttribute("href") || "";
-        const isInternal = !href.startsWith("http");
-        if (isInternal) {
-          closeNav();
-        }
-      });
-  
-      // Optional: close on Escape.
-      document.addEventListener("keydown", (event) => {
-        if (event.key === "Escape") {
-          closeNav();
-        }
-      });
+    });
+
+    // Scroll effect (shrink + solid background)
+    function handleScroll() {
+      var scrolled = window.scrollY > 10;
+      header.classList.toggle("is-scrolled", scrolled);
     }
-  
-    // Expose single init function for main.js to call.
-    window.initNavbar = function initNavbar() {
-      highlightActiveLink();
-      setupMobileToggle();
-    };
-  })();
-  
+
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
+
+    // Active link highlight based on body[data-page]
+    var pageId = document.body && document.body.dataset
+      ? document.body.dataset.page
+      : null;
+
+    if (pageId && navLinks.length) {
+      var map = {
+        home: "index.html",
+        schedule: "schedule.html",
+        travel: "travel.html",
+        rsvp: "rsvp.html",
+        faq: "faq.html",
+        party: "party.html",
+        story: "story.html"
+      };
+
+      var targetHref = map[pageId];
+      if (targetHref) {
+        navLinks.forEach(function (link) {
+          var href = link.getAttribute("href");
+          if (!href) return;
+
+          var baseHref = href.split("#")[0];
+
+          if (href === targetHref || baseHref === targetHref) {
+            link.classList.add("is-active");
+          }
+        });
+      }
+    }
+  }
+
+  // Expose for main.js
+  window.initNavbar = initNavbar;
+})();
