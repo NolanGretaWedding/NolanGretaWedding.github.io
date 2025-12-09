@@ -475,7 +475,7 @@ body[data-page="story"] .story-side-item {
 /* Normal images in the side columns, fixed height */
 body[data-page="story"] .story-side-image {
   width: 100%;
-  height: 240px;      /* change this number to resize: 200, 260, 300, etc. */
+  height: 340px;      /* change this number to resize: 200, 260, 300, etc. */
   display: block;
   object-fit: cover;  /* keeps them nicely cropped */
 }
