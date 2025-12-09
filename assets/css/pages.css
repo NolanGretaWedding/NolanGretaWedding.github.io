@@ -225,18 +225,22 @@ body[data-page="travel"] .travel-facts-grid {
   }
 }
 
+/* Hero fact cards: light “glass” cards on dark hero */
 body[data-page="travel"] .travel-fact-card {
-  background-color: rgba(10, 10, 10, 0.32);
+  background-color: rgba(253, 250, 246, 0.96);
   border-radius: var(--radius-lg);
   padding: var(--space-md);
-  border: 1px solid rgba(255, 255, 255, 0.22);
-  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(148, 126, 111, 0.28);
+  box-shadow: 0 14px 30px rgba(15, 23, 42, 0.28);
+  color: var(--color-text);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
 }
 
 body[data-page="travel"] .travel-fact-card h2 {
   font-size: var(--font-size-lg);
   margin-bottom: 0.35rem;
-  color: #ffffff;
+  color: var(--color-text);
 }
 
 body[data-page="travel"] .travel-fact-card p {
@@ -249,7 +253,7 @@ body[data-page="travel"] .travel-fact-card .travel-fact-meta {
 }
 
 body[data-page="travel"] .travel-fact-card a {
-  color: #ffffff;
+  color: var(--color-accent-strong);
   text-decoration: underline;
   text-decoration-thickness: 1px;
 }
@@ -268,15 +272,67 @@ body[data-page="travel"] .travel-badge {
   font-size: 0.8rem;
   padding: 0.25rem 0.6rem;
   border-radius: 999px;
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  background-color: rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(148, 126, 111, 0.4);
+  background-color: rgba(253, 250, 246, 0.95);
+}
+
+/* Airport & hotel cards (data-driven sections) */
+body[data-page="travel"] .airport-card,
+body[data-page="travel"] .hotel-card {
+  align-self: stretch;
+}
+
+/* Headings with nice code pill on the right for airports */
+body[data-page="travel"] .airport-card h2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 0.5rem;
+}
+
+body[data-page="travel"] .airport-card h2 strong {
+  font-size: 0.8rem;
+  padding: 0.15rem 0.55rem;
+  border-radius: 999px;
+  border: 1px solid var(--color-border-subtle);
+  background-color: var(--color-surface-alt);
+}
+
+/* Drive-time pill */
+body[data-page="travel"] .travel-drive {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.15rem 0.6rem;
+  border-radius: 999px;
+  background-color: var(--color-surface-alt);
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+/* Notes spacing */
+body[data-page="travel"] .airport-card p,
+body[data-page="travel"] .hotel-card p {
+  margin-bottom: 0.35rem;
+}
+
+/* Distance emphasis in hotel cards */
+body[data-page="travel"] .hotel-card .travel-distance {
+  font-weight: 500;
+}
+
+/* “Website” links in cards */
+body[data-page="travel"] .hotel-card a,
+body[data-page="travel"] .airport-card a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  margin-top: 0.2rem;
 }
 
 /* Note card at bottom of hotels section */
 body[data-page="travel"] .travel-note-card {
   margin-top: var(--space-lg);
 }
-
 
 /* FAQ page */
 
