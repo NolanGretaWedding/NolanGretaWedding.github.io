@@ -12,24 +12,8 @@ html {
   scroll-behavior: smooth;
 }
 
-body {
-  margin: 0;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-    sans-serif;
-  line-height: 1.6;
-  background-color: #f7f5f2;
-  color: #222;
-  text-rendering: optimizeLegibility;
-}
-
-/* Disable background scroll when nav or modal is open */
-body.nav-open,
-body.modal-open {
-  overflow: hidden;
-}
-
-/* Design tokens */
 :root {
+  /* Design tokens */
   --color-bg: #f7f5f2;
   --color-bg-alt: #ffffff;
   --color-surface: #ffffff;
@@ -74,6 +58,26 @@ body.modal-open {
   --font-size-xl: 1.5rem;
   --font-size-2xl: 2rem;
   --font-size-3xl: 2.5rem;
+
+  /* Typography: formal wedding fonts */
+  /* Body in a classic serif, headings in Playfair Display (loaded in HTML) */
+  --font-family-body: "Georgia", "Times New Roman", serif;
+  --font-family-heading: "Playfair Display", "Times New Roman", serif;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-family-body);
+  line-height: 1.7;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  text-rendering: optimizeLegibility;
+}
+
+/* Disable background scroll when nav or modal is open */
+body.nav-open,
+body.modal-open {
+  overflow: hidden;
 }
 
 /* Typography */
@@ -82,16 +86,31 @@ h1,
 h2,
 h3,
 h4,
-h5 {
+h5,
+h6 {
   margin: 0 0 0.35em;
+  font-family: var(--font-family-heading);
   font-weight: 600;
   line-height: 1.2;
   color: var(--color-text);
+  letter-spacing: 0.04em;
+}
+
+/* Slightly more dramatic main headings */
+h1 {
+  letter-spacing: 0.06em;
+}
+
+/* Section / card headings a bit tighter */
+h2,
+h3 {
+  letter-spacing: 0.05em;
 }
 
 p {
   margin: 0 0 0.8em;
   color: var(--color-text-muted);
+  font-family: var(--font-family-body);
 }
 
 a {
