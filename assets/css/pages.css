@@ -472,14 +472,13 @@ body[data-page="story"] .story-side-item {
   box-shadow: var(--shadow-soft);
 }
 
-/* Normal images in the side columns, fixed height */
+/* Normal images (no collage grid tricks) */
 body[data-page="story"] .story-side-image {
   width: 100%;
-  height: 340px;      /* change this number to resize: 200, 260, 300, etc. */
+  height: auto;
   display: block;
-  object-fit: cover;  /* keeps them nicely cropped */
+  object-fit: cover;
 }
-
 
 /* Optional: keep the side stacks sticky on tall screens */
 @media (min-width: 960px) {
