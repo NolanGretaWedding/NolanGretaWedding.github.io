@@ -439,9 +439,11 @@ body[data-page="story"] .story-section {
   padding-bottom: var(--space-3xl);
 }
 
-/* Keep header at a comfortable width */
+/* Center the header text and keep it at a comfortable width */
 body[data-page="story"] .page-header {
   max-width: 40rem;
+  margin-inline: auto;
+  text-align: center;
 }
 
 /* Slightly larger intro text for readability */
@@ -449,12 +451,32 @@ body[data-page="story"] .page-header .page-intro {
   font-size: var(--font-size-md);
 }
 
-/* Three-column layout: left images, center timeline, right images */
-body[data-page="story"] .story-layout {
-  display: grid;
-  grid-template-columns: minmax(0, 1.3fr) minmax(0, 2fr) minmax(0, 1.3fr);
-  gap: var(--space-lg);
+/* Full-width container for the three-column layout */
+body[data-page="story"] .story-layout-outer {
+  width: 100%;
+  padding-inline: var(--space-sm);
   margin-top: var(--space-xl);
+}
+
+@media (min-width: 768px) {
+  body[data-page="story"] .story-layout-outer {
+    padding-inline: var(--space-md);
+  }
+}
+
+@media (min-width: 1200px) {
+  body[data-page="story"] .story-layout-outer {
+    padding-inline: var(--space-lg);
+  }
+}
+
+/* Three-column layout: left images, center timeline, right images */
+/* This fills the width of the viewport, with only the padding above as white space */
+body[data-page="story"] .story-layout {
+  width: 100%;
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 2fr) minmax(0, 1.2fr);
+  gap: var(--space-lg);
   align-items: flex-start;
 }
 
@@ -472,7 +494,7 @@ body[data-page="story"] .story-side-item {
   box-shadow: var(--shadow-soft);
 }
 
-/* Normal images (no collage grid tricks) */
+/* Images expand to their columns; small outer padding comes from .story-layout-outer */
 body[data-page="story"] .story-side-image {
   width: 100%;
   height: auto;
@@ -523,7 +545,7 @@ body[data-page="story"] .story-timeline::before {
   );
 }
 
-/* Each story event as a soft card */
+/* Each story event as a soft card, centered text */
 body[data-page="story"] .story-event {
   position: relative;
   margin-bottom: var(--space-lg);
@@ -532,6 +554,7 @@ body[data-page="story"] .story-event {
   border-radius: var(--radius-lg);
   border: 1px solid var(--color-border-subtle);
   box-shadow: var(--shadow-soft);
+  text-align: center;
 }
 
 /* Timeline dot for each event */
@@ -547,7 +570,7 @@ body[data-page="story"] .story-event::before {
   box-shadow: 0 0 0 4px var(--color-accent-soft);
 }
 
-/* Event titles: use serif heading for clarity */
+/* Event titles */
 body[data-page="story"] .story-event h2 {
   font-family: var(--font-family-heading);
   font-size: var(--font-size-lg);
@@ -571,6 +594,7 @@ body[data-page="story"] .story-event p {
 body[data-page="story"] .story-event:last-child {
   margin-bottom: 0;
 }
+
 
 
 /* Section header */
