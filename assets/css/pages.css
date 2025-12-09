@@ -450,10 +450,9 @@ body[data-page="story"] .page-header .page-intro {
 }
 
 /* Three-column layout: left collage, center timeline, right collage */
-/* Give the side columns a bit more width so images feel larger */
 body[data-page="story"] .story-layout {
   display: grid;
-  grid-template-columns: minmax(0, 1.5fr) minmax(0, 2fr) minmax(0, 1.5fr);
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 2.2fr) minmax(0, 1.2fr);
   gap: var(--space-lg);
   margin-top: var(--space-xl);
   align-items: flex-start;
@@ -463,15 +462,8 @@ body[data-page="story"] .story-layout {
 body[data-page="story"] .story-side {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  grid-auto-rows: 150px; /* increased from 110px */
+  grid-auto-rows: 110px;
   gap: var(--space-sm);
-}
-
-/* On larger screens, make the tiles even taller */
-@media (min-width: 1200px) {
-  body[data-page="story"] .story-side {
-    grid-auto-rows: 190px;
-  }
 }
 
 /* Each photo tile */
@@ -606,7 +598,6 @@ body[data-page="story"] .story-event p {
 body[data-page="story"] .story-event:last-child {
   margin-bottom: 0;
 }
-
 
 /* Section header */
 
