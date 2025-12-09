@@ -7,8 +7,8 @@
 
   <!-- Heading font -->
   <link
-  rel="stylesheet"
-  href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&display=swap"
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&display=swap"
   />
 
   <!-- Core styles -->
@@ -17,7 +17,66 @@
   <link rel="stylesheet" href="assets/css/components.css" />
   <link rel="stylesheet" href="assets/css/pages.css" />
 
-  <meta name="description" content="Information about the wedding of Nolan and Greta, including schedule, travel details, and RSVP." />
+  <!-- Formal heading styles -->
+  <style>
+    :root {
+      --font-family-heading: "Playfair Display", "Times New Roman", serif;
+    }
+
+    /* Global heading styles */
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: var(--font-family-heading);
+      font-weight: 600;
+      letter-spacing: 0.04em;
+    }
+
+    h1 {
+      letter-spacing: 0.06em;
+    }
+
+    h2 {
+      letter-spacing: 0.05em;
+    }
+
+    /* Hero title (home) in formal wedding style */
+    .hero-title {
+      font-family: var(--font-family-heading);
+      font-size: 2.6rem;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+    }
+
+    /* Page titles and section/card headings */
+    .page-header h1,
+    .section-header h2,
+    .card h2,
+    .card h3 {
+      font-family: var(--font-family-heading);
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    /* Logo text in navbar */
+    .logo-text {
+      font-family: var(--font-family-heading);
+      font-size: 1.1rem;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+    }
+  </style>
+
+  <meta
+    name="description"
+    content="Information about the wedding of Nolan and Greta, including schedule, travel details, and RSVP."
+  />
 </head>
 <body data-page="home">
   <!-- HEADER / NAVBAR -->
@@ -35,7 +94,6 @@
           <span class="logo-text">Nolan &amp; Greta</span>
         </a>
       </div>
-      
 
       <!-- Mobile nav toggle -->
       <button
@@ -60,7 +118,6 @@
         <a href="story.html">Our Story</a>
         <a href="registry.html">Registry</a>
       </nav>
-      
     </div>
 
     <!-- Mobile overlay -->
@@ -135,7 +192,7 @@
               4:00 pm
             </p>
             <p>
-              Stoneleigh Golf & Country Club<br />
+              Stoneleigh Golf &amp; Country Club<br />
               35271 Prestwick Ct<br />
               Round Hill, VA 20141
             </p>
