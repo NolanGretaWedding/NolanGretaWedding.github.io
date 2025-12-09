@@ -434,27 +434,91 @@ body[data-page="party"] .party-bio {
 
 /* Our story page */
 
-body[data-page="story"] .story-timeline {
-  border-left: 2px solid var(--color-border-subtle);
-  padding-left: var(--space-md);
-  margin-top: var(--space-md);
+body[data-page="story"] .story-section {
+  padding-top: var(--space-3xl);
+  padding-bottom: var(--space-3xl);
 }
 
+/* Keep header at a comfortable width */
+body[data-page="story"] .page-header {
+  max-width: 40rem;
+}
+
+/* Slightly larger intro text for readability */
+body[data-page="story"] .page-header .page-intro {
+  font-size: var(--font-size-md);
+}
+
+/* Vertical timeline with soft cards */
+body[data-page="story"] .story-timeline {
+  position: relative;
+  margin-top: var(--space-xl);
+  padding-left: 2.25rem;
+}
+
+/* Vertical line */
+body[data-page="story"] .story-timeline::before {
+  content: "";
+  position: absolute;
+  left: 0.9rem;
+  top: 0.25rem;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(
+    var(--color-accent-soft),
+    rgba(0, 0, 0, 0)
+  );
+}
+
+/* Each story event as a soft card */
 body[data-page="story"] .story-event {
   position: relative;
-  margin-bottom: var(--space-md);
+  margin-bottom: var(--space-lg);
+  padding: var(--space-md) var(--space-md) var(--space-md) var(--space-lg);
+  background-color: var(--color-surface);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border-subtle);
+  box-shadow: var(--shadow-soft);
 }
 
+/* Timeline dot for each event */
 body[data-page="story"] .story-event::before {
   content: "";
   position: absolute;
-  left: -0.6rem;
-  top: 0.45rem;
-  width: 10px;
-  height: 10px;
+  left: -0.15rem;
+  top: 1.2rem;
+  width: 12px;
+  height: 12px;
   border-radius: 999px;
   background-color: var(--color-accent);
+  box-shadow: 0 0 0 4px var(--color-accent-soft);
 }
+
+/* Event titles: use serif heading rather than script for clarity */
+body[data-page="story"] .story-event h2 {
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-lg);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+/* Date / location meta styling */
+body[data-page="story"] .story-event .text-muted small {
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+/* Paragraphs inside story events */
+body[data-page="story"] .story-event p {
+  margin-bottom: 0.5rem;
+}
+
+/* Last event: a bit more breathing room at the bottom */
+body[data-page="story"] .story-event:last-child {
+  margin-bottom: 0;
+}
+
 
 /* Section header */
 
