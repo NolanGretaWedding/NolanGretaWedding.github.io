@@ -282,7 +282,7 @@ body[data-page="travel"] .hotel-card {
   align-self: stretch;
 }
 
-/* Headings with nice code pill on the right for airports */
+/* Headings with code pill on the right for airports */
 body[data-page="travel"] .airport-card h2 {
   display: flex;
   justify-content: space-between;
@@ -342,16 +342,94 @@ body[data-page="faq"] #faq-list {
 
 /* Party page */
 
+/* Extra breathing room on first section */
+body[data-page="party"] .page-section:first-of-type {
+  padding-top: var(--space-3xl);
+}
+
+/* Keep intro readable width */
+body[data-page="party"] .page-header {
+  max-width: 44rem;
+}
+
+/* Grid for cards */
 body[data-page="party"] .party-grid {
+  margin-top: var(--space-xl);
   display: grid;
   grid-template-columns: minmax(0, 1fr);
-  gap: var(--space-md);
+  gap: var(--space-lg);
 }
 
 @media (min-width: 640px) {
   body[data-page="party"] .party-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+}
+
+/* Card layout */
+body[data-page="party"] .party-card {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: var(--space-md);
+  padding: var(--space-md);
+  border-radius: var(--radius-xl);
+  background: linear-gradient(
+    135deg,
+    var(--color-surface),
+    #fdf7f2
+  );
+  border: 1px solid var(--color-border-subtle);
+  box-shadow: 0 14px 30px rgba(15, 23, 42, 0.14);
+}
+
+/* Highlight the first two (typically Nolan & Greta or key roles) */
+body[data-page="party"] .party-card:nth-child(-n + 2) {
+  border-color: rgba(192, 127, 91, 0.9);
+  box-shadow: 0 18px 36px rgba(192, 127, 91, 0.25);
+}
+
+/* Stack vertically on small screens */
+@media (max-width: 540px) {
+  body[data-page="party"] .party-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* Photos */
+body[data-page="party"] .party-photo {
+  width: 120px;
+  height: 120px;
+  border-radius: 999px;
+  object-fit: cover;
+  flex-shrink: 0;
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.25);
+}
+
+@media (min-width: 768px) {
+  body[data-page="party"] .party-photo {
+    width: 140px;
+    height: 140px;
+  }
+}
+
+/* Content inside card */
+body[data-page="party"] .party-content h2 {
+  margin-bottom: 0.15rem;
+}
+
+body[data-page="party"] .party-role {
+  margin-bottom: 0.4rem;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--color-accent-strong);
+}
+
+body[data-page="party"] .party-bio {
+  font-size: 0.95rem;
+  color: var(--color-text-soft);
 }
 
 /* Our story page */
