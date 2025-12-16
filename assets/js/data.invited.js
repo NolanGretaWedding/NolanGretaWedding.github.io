@@ -21,5 +21,20 @@ var INVITED_NAMES = [
   "Ammon Harteis",
   "Merrill Harteis",
   "Alex Fox",
-  "Alexander Fox"
+  "Alexander Fox",
+  "Ben Lovingood",
+  "Benjamin Lovingood",
+  "Carson Wiley",
+  "Daniel Myers",
+  "Dan Myers",
+  "Todd Shifflett",
+  "Jake Smith",
+  "Jacob Smith",
+  "Will Inglis",
+  "William Inglis",
+  "Haley Frankovich",
+  "Casey Hughes",
+  "Jett Glackin",
+  "Nick Eastman",
+  "Nicholas Eastman"
 ];
