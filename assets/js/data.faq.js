@@ -18,7 +18,7 @@ var FAQ_ITEMS = [
   {
     question: "Can I bring a plus-one?",
     answer:
-      "Your invitation will indicate if a guest is included. If you have questions about bringing someone, please contact us before RSVP'ing so we can do our best to accommodate."
+      "Your invitation will indicate if a guest is included. If you have questions about bringing someone, please contact us before RSVP'ing."
   },
   {
     question: "What time should I arrive?",
@@ -28,7 +28,7 @@ var FAQ_ITEMS = [
   {
     question: "Is the ceremony and reception at the same location?",
     answer:
-      "Yes, both the ceremony and reception will be at the main venue unless noted otherwise on the Schedule page. This should simplify transportation once you arrive."
+      "Yes, everything will take place at the same location. Directions and venue details can be found on the Travel page."
   },
   {
     question: "Where should I stay?",
@@ -38,12 +38,17 @@ var FAQ_ITEMS = [
   {
     question: "Is there parking at the venue?",
     answer:
-      "Yes, there will be parking on site or very close to the venue."
+      "Yes, there will be free parking on site or very close to the venue."
   },
   {
     question: "Will the events be indoors or outdoors?",
     answer:
       "Everything will primarily take place outdoors, with some covered areas available. Please check the weather forecast as the date approaches and dress accordingly. An indoor alternative may be provided if weather is not favorable."
+  },
+  {
+    question: "Is there a hotel room block?",
+    answer:
+      "Unfortunately, we do not have a room block reserved at any hotels. Please refer to the Travel page for lodging suggestions."
   },
   {
     question: "I have dietary restrictions. What should I do?",

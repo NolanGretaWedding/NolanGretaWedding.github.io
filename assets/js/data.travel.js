@@ -36,43 +36,43 @@ var TRAVEL_AIRPORTS = [
 // You can add fields like `blockCode` or `blockDeadline` if you want.
 var TRAVEL_HOTELS = [
   {
-    name: "The Windswept Inn",
-    address: "18104 Calumet Ln, Round Hill, VA 20141",
-    phone: "(703) 314-2313",
-    distance: "5 minutes from venue",
+    name: "Hampton Inn & Suites",
+    address: "117 Fort Evans Rd NE, Leesburg, VA 20176",
+    phone: "(703) 669-8640",
+    distance: "25 minutes from venue",
     notes:
-      "Placeholder",
-    url: "placeholder",
+      "4.1 Stars on Google Reviews",
+    url: "https://www.hilton.com/en/hotels/waslbhx-hampton-suites-leesburg/?SEO_id=GMB-AMER-HX-WASLBHX&y_source=1_MjA4MjA5NS03MTUtbG9jYXRpb24ud2Vic2l0ZQ%3D%3D",
     hasRoomBlock: false
   },
   {
-    name: "Hotel 2",
-    address: "Placeholder",
-    phone: "Placeholder",
-    distance: "Placeholder",
+    name: "Homewood Suites by Hilton",
+    address: "115 Fort Evans Rd NE, Leesburg, VA 20176",
+    phone: "(571) 258-1068",
+    distance: "26 minutes from venue",
     notes:
-      "Placeholder",
-    url: "Placeholder",
+      "4.3 Stars on Google Reviews",
+    url: "https://www.hilton.com/en/hotels/waslghw-homewood-suites-leesburg-va/?SEO_id=GMB-AMER-HG-WASLGHW&y_source=1_MjA4MjA2OC03MTUtbG9jYXRpb24ud2Vic2l0ZQ%3D%3D",
     hasRoomBlock: false
   },
   {
-    name: "Hotel 3",
-    address: "Placeholder",
-    phone: "Placeholder",
-    distance: "Placeholder",
+    name: "Best Western",
+    address: "726 E Market St, Leesburg, VA 20176",
+    phone: "(703) 777-9400",
+    distance: "26 minutes from venue",
     notes:
-      "Placeholder",
-    url: "Placeholder",
+      "3.7 Stars on Google Reviews",
+    url: "https://www.bestwestern.com/en_US/book/hotel-rooms.47076.html?iata=00171880&ssob=BLBWI0004G&cid=BLBWI0004G:google:gmb:47076",
     hasRoomBlock: false
   },
   {
-    name: "Hotel 4",
-    address: "Placeholder",
-    phone: "Placeholder",
-    distance: "Placeholder",
+    name: "Holiday Inn Express & Suites",
+    address: "80 Prosperity Ave SE, Leesburg, VA 20175",
+    phone: "(703) 669-1650",
+    distance: "26 minutes from venue",
     notes:
-      "Placeholder",
-    url: "Placeholder",
+      "4.4 Stars on Google Reviews",
+    url: "https://www.ihg.com/leesburg-virginia?cm_mmc=GoogleMaps-_-EX-_-US-_-WASLB",
     hasRoomBlock: false
   }
 ];
