@@ -597,6 +597,82 @@ body[data-page="story"] .story-event:last-child {
 
 
 
+/* Registry page */
+
+body[data-page="registry"] .registry-hero {
+  padding-top: var(--space-3xl);
+  padding-bottom: var(--space-3xl);
+  background: linear-gradient(
+    135deg,
+    var(--color-surface),
+    #fdf7f2
+  );
+  border-bottom: 1px solid var(--color-border-subtle);
+}
+
+body[data-page="registry"] .registry-hero .page-header {
+  max-width: 40rem;
+  margin-inline: auto;
+  text-align: center;
+}
+
+body[data-page="registry"] .registry-intro {
+  font-size: var(--font-size-md);
+}
+
+/* Grid and cards */
+
+body[data-page="registry"] .registry-grid {
+  margin-top: var(--space-lg);
+  align-items: stretch;
+}
+
+body[data-page="registry"] .registry-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  padding: var(--space-lg);
+  border-radius: var(--radius-xl);
+  background: linear-gradient(
+    135deg,
+    var(--color-surface),
+    #fdf7f2
+  );
+  border: 1px solid var(--color-border-subtle);
+  box-shadow: 0 14px 30px rgba(15, 23, 42, 0.12);
+}
+
+/* Small label above each card title */
+body[data-page="registry"] .registry-label {
+  font-size: var(--font-size-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--color-accent-strong);
+  margin-bottom: 0.15rem;
+}
+
+/* Slightly softer secondary text */
+body[data-page="registry"] .registry-meta {
+  font-size: 0.9rem;
+}
+
+/* Make buttons sit at the bottom if content heights differ */
+body[data-page="registry"] .registry-card .btn {
+  margin-top: auto;
+}
+
+/* Note card at bottom */
+body[data-page="registry"] .registry-note-card {
+  border-radius: var(--radius-xl);
+  padding: var(--space-lg);
+  text-align: center;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border-subtle);
+  box-shadow: var(--shadow-soft);
+}
+
+
+
 /* Section header */
 
 .section-header {
