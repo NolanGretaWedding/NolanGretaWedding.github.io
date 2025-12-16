@@ -625,13 +625,11 @@ body[data-page="registry"] .registry-hero::before {
   z-index: 0;
 }
 
-/* Ensure hero content sits above overlay */
+/* Hero content on top of overlay, left-aligned (like schedule) */
 body[data-page="registry"] .registry-hero .page-header {
   position: relative;
   z-index: 1;
   max-width: 40rem;
-  margin-inline: auto;
-  text-align: center;
 }
 
 body[data-page="registry"] .registry-hero h1 {
@@ -647,11 +645,54 @@ body[data-page="registry"] .registry-intro {
   font-size: var(--font-size-md);
 }
 
-/* Registry cards / grid */
+/* Legend row under header (mirrors schedule legend concept) */
+body[data-page="registry"] .registry-legend {
+  position: relative;
+  z-index: 1;
+  margin-top: var(--space-md);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
+}
 
+/* Base legend chip style */
+body[data-page="registry"] .registry-legend .legend-item {
+  font-size: var(--font-size-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--radius-pill);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.16);
+  color: #fdfaf6;
+}
+
+/* Red-tinted chip for Amazon registry */
+body[data-page="registry"] .registry-legend-amazon {
+  background-color: rgba(248, 113, 113, 0.25);
+  border-color: rgba(248, 113, 113, 0.85);
+}
+
+/* Blue-tinted chip for honeymoon registry */
+body[data-page="registry"] .registry-legend-honeymoon {
+  background-color: rgba(96, 165, 250, 0.25);
+  border-color: rgba(96, 165, 250, 0.85);
+}
+
+/* Registry cards / grid (centered like schedule list) */
 body[data-page="registry"] .registry-grid {
   margin-top: var(--space-lg);
-  align-items: stretch;
+  max-width: 720px;
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space-lg);
+}
+
+@media (min-width: 768px) {
+  body[data-page="registry"] .registry-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 body[data-page="registry"] .registry-card {
@@ -669,45 +710,17 @@ body[data-page="registry"] .registry-card {
   box-shadow: 0 14px 30px rgba(15, 23, 42, 0.12);
 }
 
-/* Base label pill */
-body[data-page="registry"] .registry-label {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  font-size: var(--font-size-xs);
-  text-transform: uppercase;
-  letter-spacing: 0.16em;
-  padding: 0.2rem 0.7rem;
-  border-radius: var(--radius-pill);
-  border: 1px solid rgba(0, 0, 0, 0.08);
-  margin-bottom: 0.25rem;
-}
-
-/* Red tag for Amazon registry */
-body[data-page="registry"] .registry-label--amazon {
-  background-color: rgba(220, 38, 38, 0.08); /* soft red */
-  color: #b91c1c;
-  border-color: rgba(248, 113, 113, 0.7);
-}
-
-/* Blue tag for honeymoon/experiences */
-body[data-page="registry"] .registry-label--honeymoon {
-  background-color: rgba(37, 99, 235, 0.08); /* soft blue */
-  color: #1d4ed8;
-  border-color: rgba(96, 165, 250, 0.7);
-}
-
 /* Slightly softer secondary text */
 body[data-page="registry"] .registry-meta {
   font-size: 0.9rem;
 }
 
-/* Keep buttons anchored at bottom if cards differ in height */
+/* Keep buttons anchored at bottom if card heights differ */
 body[data-page="registry"] .registry-card .btn {
   margin-top: auto;
 }
 
-/* Note card at bottom */
+/* Optional note section card (already in markup) */
 body[data-page="registry"] .registry-note-card {
   border-radius: var(--radius-xl);
   padding: var(--space-lg);
@@ -716,6 +729,7 @@ body[data-page="registry"] .registry-note-card {
   border: 1px solid var(--color-border-subtle);
   box-shadow: var(--shadow-soft);
 }
+
 
 
 
