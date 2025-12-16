@@ -63,7 +63,7 @@
   </header>
 
   <main>
-    <!-- REGISTRY HERO (same format idea as schedule hero) -->
+    <!-- REGISTRY HERO (mirrors schedule hero style) -->
     <section class="page-section registry-hero">
       <div class="content-width">
         <header class="page-header">
@@ -83,56 +83,98 @@
       </div>
     </section>
 
-    <!-- REGISTRY CARDS (centered on the page) -->
+    <!-- REGISTRY LAYOUT: side images + centered cards -->
     <section class="page-section">
-      <div class="content-width">
-        <div class="registry-grid card-grid">
-          <!-- Amazon registry -->
-          <article class="card registry-card">
-            <h2>Amazon Registry</h2>
-            <p>
-              A collection of items for our home and day-to-day life together,
-              from practical pieces to a few fun things we’re excited about.
-            </p>
-            <p class="text-muted registry-meta">
-              You can ship gifts directly to us using the address stored in the
-              registry. Thank you for helping us build our home.
-            </p>
-            <a
-              class="btn btn-primary"
-              href="https://www.amazon.com/wedding/registry/389QYWL4R2RKY"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              View Amazon registry
-            </a>
-          </article>
+      <!-- Full-width wrapper (like story-layout-outer) -->
+      <div class="registry-layout-outer">
+        <div class="registry-layout">
+          <!-- LEFT IMAGE COLUMN -->
+          <div class="registry-side registry-side-left">
+            <figure class="registry-side-item">
+              <img
+                src="assets/img/registry-left-1.jpg"
+                alt="Detail from our home"
+                class="registry-side-image"
+              />
+            </figure>
+            <figure class="registry-side-item">
+              <img
+                src="assets/img/registry-left-2.jpg"
+                alt="Decor inspiration"
+                class="registry-side-image"
+              />
+            </figure>
+          </div>
 
-          <!-- Honeymoon / experiences registry -->
-          <article class="card registry-card">
-            <h2>Honeymoon &amp; Experiences</h2>
-            <p>
-              If you prefer, you can contribute toward experiences and our
-              honeymoon instead of a physical gift.
-            </p>
-            <p class="text-muted registry-meta">
-              We’ll share photos and stories afterwards so you can see what you
-              helped make possible.
-            </p>
-            <a
-              class="btn btn-primary"
-              href="https://example.com/honeymoon-fund"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              View honeymoon fund
-            </a>
-          </article>
+          <!-- CENTER COLUMN: REGISTRY CARDS -->
+          <div class="registry-main">
+            <div class="registry-grid">
+              <!-- Amazon registry -->
+              <article class="card registry-card">
+                <h2>Amazon Registry</h2>
+                <p>
+                  A collection of items for our home and day-to-day life together,
+                  from practical pieces to a few fun things we’re excited about.
+                </p>
+                <p class="text-muted registry-meta">
+                  You can ship gifts directly to us using the address stored in the
+                  registry. Thank you for helping us build our home.
+                </p>
+                <a
+                  class="btn btn-primary"
+                  href="https://www.amazon.com/wedding/registry/389QYWL4R2RKY"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  View Amazon registry
+                </a>
+              </article>
+
+              <!-- Honeymoon / experiences registry -->
+              <article class="card registry-card">
+                <h2>Honeymoon &amp; Experiences</h2>
+                <p>
+                  If you prefer, you can contribute toward experiences and our
+                  honeymoon instead of a physical gift.
+                </p>
+                <p class="text-muted registry-meta">
+                  We’ll share photos and stories afterwards so you can see what you
+                  helped make possible.
+                </p>
+                <a
+                  class="btn btn-primary"
+                  href="https://example.com/honeymoon-fund"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  View honeymoon fund
+                </a>
+              </article>
+            </div>
+          </div>
+
+          <!-- RIGHT IMAGE COLUMN -->
+          <div class="registry-side registry-side-right">
+            <figure class="registry-side-item">
+              <img
+                src="assets/img/registry-right-1.jpg"
+                alt="Travel moment"
+                class="registry-side-image"
+              />
+            </figure>
+            <figure class="registry-side-item">
+              <img
+                src="assets/img/registry-right-2.jpg"
+                alt="Another favorite moment"
+                class="registry-side-image"
+              />
+            </figure>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- OPTIONAL NOTE SECTION (like arrival suggestions on schedule) -->
+    <!-- NOTE SECTION -->
     <section class="page-section section-alt">
       <div class="content-width">
         <h2>A quick note about gifts</h2>

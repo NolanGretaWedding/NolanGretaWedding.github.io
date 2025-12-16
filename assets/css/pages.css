@@ -599,7 +599,7 @@ body[data-page="story"] .story-event:last-child {
 
 /* Registry page */
 
-/* Hero with background image (similar to schedule/travel) */
+/* Hero with background image (mirrors schedule/travel style) */
 body[data-page="registry"] .registry-hero {
   position: relative;
   padding-top: var(--space-3xl);
@@ -625,11 +625,11 @@ body[data-page="registry"] .registry-hero::before {
   z-index: 0;
 }
 
-/* Hero content on top of overlay, left-aligned (like schedule) */
-body[data-page="registry"] .registry-hero .page-header {
+/* Ensure hero content & legend sit above overlay */
+body[data-page="registry"] .registry-hero .page-header,
+body[data-page="registry"] .registry-hero .registry-legend {
   position: relative;
   z-index: 1;
-  max-width: 40rem;
 }
 
 body[data-page="registry"] .registry-hero h1 {
@@ -642,59 +642,44 @@ body[data-page="registry"] .registry-hero .registry-intro {
 }
 
 body[data-page="registry"] .registry-intro {
+  max-width: 40rem;
   font-size: var(--font-size-md);
 }
 
-/* Legend row under header (mirrors schedule legend concept) */
+/* Legend (same idea as schedule legend, but for registry types) */
 body[data-page="registry"] .registry-legend {
-  position: relative;
-  z-index: 1;
   margin-top: var(--space-md);
   display: flex;
   flex-wrap: wrap;
   gap: var(--space-xs);
 }
 
-/* Base legend chip style */
 body[data-page="registry"] .registry-legend .legend-item {
-  font-size: var(--font-size-xs);
-  text-transform: uppercase;
-  letter-spacing: 0.14em;
+  display: inline-flex;
+  align-items: center;
   padding: 0.25rem 0.75rem;
   border-radius: var(--radius-pill);
-  border: 1px solid rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.55);
   background-color: rgba(255, 255, 255, 0.16);
+  font-size: var(--font-size-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
   color: #fdfaf6;
 }
 
-/* Red-tinted chip for Amazon registry */
+/* Red tag styling for Amazon legend chip */
 body[data-page="registry"] .registry-legend-amazon {
-  background-color: rgba(248, 113, 113, 0.25);
-  border-color: rgba(248, 113, 113, 0.85);
+  background-color: rgba(220, 38, 38, 0.28);
+  border-color: rgba(248, 113, 113, 0.9);
 }
 
-/* Blue-tinted chip for honeymoon registry */
+/* Blue tag styling for honeymoon legend chip */
 body[data-page="registry"] .registry-legend-honeymoon {
-  background-color: rgba(96, 165, 250, 0.25);
-  border-color: rgba(96, 165, 250, 0.85);
+  background-color: rgba(37, 99, 235, 0.28);
+  border-color: rgba(96, 165, 250, 0.9);
 }
 
-/* Registry cards / grid (centered like schedule list) */
-body[data-page="registry"] .registry-grid {
-  margin-top: var(--space-lg);
-  max-width: 720px;
-  margin-inline: auto;
-  display: grid;
-  grid-template-columns: minmax(0, 1fr);
-  gap: var(--space-lg);
-}
-
-@media (min-width: 768px) {
-  body[data-page="registry"] .registry-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
-
+/* Registry cards: shared look */
 body[data-page="registry"] .registry-card {
   display: flex;
   flex-direction: column;
@@ -710,25 +695,114 @@ body[data-page="registry"] .registry-card {
   box-shadow: 0 14px 30px rgba(15, 23, 42, 0.12);
 }
 
+body[data-page="registry"] .registry-card h2 {
+  margin-bottom: 0.25rem;
+}
+
 /* Slightly softer secondary text */
 body[data-page="registry"] .registry-meta {
   font-size: 0.9rem;
 }
 
-/* Keep buttons anchored at bottom if card heights differ */
+/* Keep buttons anchored at bottom if cards differ in height */
 body[data-page="registry"] .registry-card .btn {
   margin-top: auto;
 }
 
-/* Optional note section card (already in markup) */
-body[data-page="registry"] .registry-note-card {
-  border-radius: var(--radius-xl);
-  padding: var(--space-lg);
-  text-align: center;
-  background-color: var(--color-surface);
-  border: 1px solid var(--color-border-subtle);
+/* --- Side images + centered cards layout (similar to story) --- */
+
+/* Full-width outer wrapper */
+body[data-page="registry"] .registry-layout-outer {
+  width: 100%;
+  padding-inline: var(--space-sm);
+  margin-top: var(--space-xl);
+}
+
+@media (min-width: 768px) {
+  body[data-page="registry"] .registry-layout-outer {
+    padding-inline: var(--space-md);
+  }
+}
+
+@media (min-width: 1200px) {
+  body[data-page="registry"] .registry-layout-outer {
+    padding-inline: var(--space-lg);
+  }
+}
+
+/* Three-column layout: left images, center cards, right images */
+body[data-page="registry"] .registry-layout {
+  width: 100%;
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 2fr) minmax(0, 1.2fr);
+  gap: var(--space-lg);
+  align-items: flex-start;
+}
+
+/* Side columns: vertical stacks of images */
+body[data-page="registry"] .registry-side {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+/* Each photo card on the sides */
+body[data-page="registry"] .registry-side-item {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
   box-shadow: var(--shadow-soft);
 }
+
+/* Side images fill their column */
+body[data-page="registry"] .registry-side-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* Center column that holds the registry grid */
+body[data-page="registry"] .registry-main {
+  display: flex;
+  justify-content: center;
+}
+
+/* Registry grid stays centered and reasonably narrow */
+body[data-page="registry"] .registry-grid {
+  max-width: 720px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space-lg);
+}
+
+/* Optional: keep the side stacks sticky on tall screens */
+@media (min-width: 960px) {
+  body[data-page="registry"] .registry-side {
+    position: sticky;
+    top: calc(var(--space-lg) * 2);
+  }
+}
+
+/* On small screens, hide side images and let cards use full width */
+@media (max-width: 960px) {
+  body[data-page="registry"] .registry-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  body[data-page="registry"] .registry-side {
+    display: none;
+  }
+
+  body[data-page="registry"] .registry-main {
+    justify-content: center;
+  }
+
+  body[data-page="registry"] .registry-grid {
+    max-width: 100%;
+  }
+}
+
 
 
 
