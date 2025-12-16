@@ -599,28 +599,55 @@ body[data-page="story"] .story-event:last-child {
 
 /* Registry page */
 
+/* Hero with background image (similar to schedule/travel) */
 body[data-page="registry"] .registry-hero {
+  position: relative;
   padding-top: var(--space-3xl);
   padding-bottom: var(--space-3xl);
-  background: linear-gradient(
-    135deg,
-    var(--color-surface),
-    #fdf7f2
-  );
-  border-bottom: 1px solid var(--color-border-subtle);
+  background-image: url("../img/registry-hero.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  color: #fdfaf6;
+  overflow: hidden;
 }
 
+/* Dark gradient overlay for readability */
+body[data-page="registry"] .registry-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.25),
+    rgba(0, 0, 0, 0.55)
+  );
+  z-index: 0;
+}
+
+/* Ensure hero content sits above overlay */
 body[data-page="registry"] .registry-hero .page-header {
+  position: relative;
+  z-index: 1;
   max-width: 40rem;
   margin-inline: auto;
-  text-align: left;
+  text-align: center;
+}
+
+body[data-page="registry"] .registry-hero h1 {
+  color: #ffffff;
+}
+
+body[data-page="registry"] .registry-hero .page-kicker,
+body[data-page="registry"] .registry-hero .registry-intro {
+  color: #f0ece5;
 }
 
 body[data-page="registry"] .registry-intro {
   font-size: var(--font-size-md);
 }
 
-/* Grid and cards */
+/* Registry cards / grid */
 
 body[data-page="registry"] .registry-grid {
   margin-top: var(--space-lg);
@@ -642,13 +669,32 @@ body[data-page="registry"] .registry-card {
   box-shadow: 0 14px 30px rgba(15, 23, 42, 0.12);
 }
 
-/* Small label above each card title */
+/* Base label pill */
 body[data-page="registry"] .registry-label {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   font-size: var(--font-size-xs);
   text-transform: uppercase;
   letter-spacing: 0.16em;
-  color: var(--color-accent-strong);
-  margin-bottom: 0.15rem;
+  padding: 0.2rem 0.7rem;
+  border-radius: var(--radius-pill);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  margin-bottom: 0.25rem;
+}
+
+/* Red tag for Amazon registry */
+body[data-page="registry"] .registry-label--amazon {
+  background-color: rgba(220, 38, 38, 0.08); /* soft red */
+  color: #b91c1c;
+  border-color: rgba(248, 113, 113, 0.7);
+}
+
+/* Blue tag for honeymoon/experiences */
+body[data-page="registry"] .registry-label--honeymoon {
+  background-color: rgba(37, 99, 235, 0.08); /* soft blue */
+  color: #1d4ed8;
+  border-color: rgba(96, 165, 250, 0.7);
 }
 
 /* Slightly softer secondary text */
@@ -656,7 +702,7 @@ body[data-page="registry"] .registry-meta {
   font-size: 0.9rem;
 }
 
-/* Make buttons sit at the bottom if content heights differ */
+/* Keep buttons anchored at bottom if cards differ in height */
 body[data-page="registry"] .registry-card .btn {
   margin-top: auto;
 }
@@ -670,6 +716,7 @@ body[data-page="registry"] .registry-note-card {
   border: 1px solid var(--color-border-subtle);
   box-shadow: var(--shadow-soft);
 }
+
 
 
 
