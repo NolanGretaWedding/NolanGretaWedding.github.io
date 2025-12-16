@@ -65,14 +65,14 @@ var TRAVEL_HOTELS = [
     url: "https://www.bestwestern.com/en_US/book/hotel-rooms.47076.html?iata=00171880&ssob=BLBWI0004G&cid=BLBWI0004G:google:gmb:47076",
     hasRoomBlock: false
   },
-  {
-    name: "Holiday Inn Express & Suites",
-    address: "80 Prosperity Ave SE, Leesburg, VA 20175",
-    phone: "(703) 669-1650",
-    distance: "26 minutes from venue",
-    notes:
-      "4.4 Stars on Google Reviews",
-    url: "https://www.ihg.com/leesburg-virginia?cm_mmc=GoogleMaps-_-EX-_-US-_-WASLB",
-    hasRoomBlock: false
-  }
+  // {
+  //   name: "Holiday Inn Express & Suites",
+  //   address: "80 Prosperity Ave SE, Leesburg, VA 20175",
+  //   phone: "(703) 669-1650",
+  //   distance: "26 minutes from venue",
+  //   notes:
+  //     "4.4 Stars on Google Reviews",
+  //   url: "https://www.ihg.com/leesburg-virginia?cm_mmc=GoogleMaps-_-EX-_-US-_-WASLB",
+  //   hasRoomBlock: false
+  // }
 ];
