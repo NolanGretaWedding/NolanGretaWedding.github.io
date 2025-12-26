@@ -488,7 +488,7 @@ body[data-page="party"] .party-photo {
 @media (min-width: 768px) {
   body[data-page="party"] .party-photo {
     width: 140px;
-    height: 140px;
+    height: 170px;
   }
 }
 
