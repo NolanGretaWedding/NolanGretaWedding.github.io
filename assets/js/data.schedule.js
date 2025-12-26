@@ -19,10 +19,10 @@ var VENUES = {
   },
   "rehearsal-dinner-location": {
     id: "rehearsal-dinner-location",
-    name: "Franklin Park",
-    address: "36441 Blueridge View Ln, Purcellville, VA 20132",
-    mapUrl: "https://maps.app.goo.gl/ennG2uYuYX7HxYfp9",
-    notes: "Informal dinner for out-of-town guests and family."
+    name: "TBD Rehearsal Dinner Location",
+    address: "TBD Address",
+    mapUrl: "TBD Map URL",
+    notes: "Placeholder for rehearsal dinner details"
   },
   // "farewell-brunch-location": {
   //   id: "farewell-brunch-location",
@@ -47,7 +47,7 @@ var SCHEDULE_ITEMS = [
     title: "Rehearsal dinner",
     locationId: "rehearsal-dinner-location",
     description:
-      "A casual rehearsal dinner at Franklin Park in preparation for the Saturday wedding."
+      "Rehearsal details are still to be determined."
   },
 
   // -------- Saturday (wedding day) --------
@@ -93,7 +93,7 @@ var SCHEDULE_ITEMS = [
     title: "Cocktail hour",
     locationId: "main-venue",
     description:
-      "Drinks and horderves will be served by the barn while the couple takes photos."
+      "Drinks and hors d'oeuvres will be served by the barn while the couple takes photos."
   },
   {
     id: "reception",

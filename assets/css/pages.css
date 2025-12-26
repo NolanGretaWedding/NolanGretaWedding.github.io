@@ -478,7 +478,7 @@ body[data-page="party"] .party-card:nth-child(-n + 2) {
 /* Photos */
 body[data-page="party"] .party-photo {
   width: 120px;
-  height: 120px;
+  height: 150px;
   border-radius: 999px;
   object-fit: cover;
   flex-shrink: 0;
