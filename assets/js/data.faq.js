@@ -8,7 +8,7 @@ var FAQ_ITEMS = [
   {
     question: "What is the dress code?",
     answer:
-      "The dress code is semi-formal/cocktail attire. We encourage guests to dress comfortably while still looking polished. Think dresses, skirts, dress pants, button-down shirts, and blazers. Please consider the outdoor setting when choosing your outfit."
+      "Our dress code is garden formal. We invite you to dress to the nines to help us celebrate our marriage. Please wear formal attire in bright colors and fun patterns. Long dresses or skirts, suits and ties, and dressy separates are preferred. Do not wear jeans adn do not wear white (including in patterns). The ceremony will take place on real grass, so please be mindful of heels."
   },
   {
     question: "Are children invited?",
