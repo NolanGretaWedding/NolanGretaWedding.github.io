@@ -8,7 +8,7 @@ var FAQ_ITEMS = [
   {
     question: "What is the dress code?",
     answer:
-      "Our dress code is garden formal. We invite you to dress to the nines to help us celebrate our marriage. Please wear formal attire in bright colors and fun patterns. Long dresses or skirts, suits and ties, and dressy separates are preferred. Do not wear jeans adn do not wear white (including in patterns). The ceremony will take place on real grass, so please be mindful of heels."
+      "Our dress code is garden formal. We invite you to dress to the nines to help us celebrate our marriage. Please wear formal attire in bright colors and fun patterns. Long dresses or skirts, suits and ties, and dressy separates are preferred. Do not wear jeans and do not wear white (including in patterns). The ceremony will take place on real grass, so please be mindful of heels."
   },
   {
     question: "Are children invited?",
