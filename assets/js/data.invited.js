@@ -23,6 +23,7 @@ var INVITED_NAMES = [
   "Alex Fox",
   "Alexander Fox",
   "Deb Frankovich",
+  "Haley Frankovich",
   "Kevin Frankovich",
   "Allison Frederick Harteis",
   "Allison Frederick",
