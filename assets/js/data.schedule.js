@@ -71,7 +71,7 @@ var SCHEDULE_ITEMS = [
     title: "Guest arrival & seating",
     locationId: "main-venue",
     description:
-      "Doors open and guests may begin taking their seats. Please arrive a little early to allow time for parking and seating."
+      "Doors open at 3:30pm for guests to arrive and be seated before the ceremony begins at 4:00pm."
   },
   {
     id: "ceremony",
@@ -93,7 +93,7 @@ var SCHEDULE_ITEMS = [
     title: "Cocktail hour",
     locationId: "main-venue",
     description:
-      "Drinks and hors d'oeuvres will be served by the barn while the couple takes photos."
+      "Drinks and hors d'oeuvres will be served outside the courtyard while the couple takes photos."
   },
   {
     id: "reception",
@@ -111,11 +111,11 @@ var SCHEDULE_ITEMS = [
     type: "other",
     dayLabel: "Saturday",
     date: "Saturday, September 19, 2026",
-    time: "10:00 pm",
+    time: "9:30 pm",
     title: "Send-off",
     locationId: "main-venue",
     description:
-      "Approximate end time. Final details will be shared closer to the date."
+      "We'll wrap up the night with a send-off around 9:30pm. Feel free to join in the fun or head out whenever you're ready!"
   },
 
   // -------- Sunday (optional brunch) --------
