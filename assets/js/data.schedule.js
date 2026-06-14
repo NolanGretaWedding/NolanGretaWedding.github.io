@@ -80,7 +80,7 @@ var SCHEDULE_ITEMS = [
     date: "Saturday, September 19, 2026",
     time: "4:00 pm",
     title: "Ceremony",
-    // locationId: "main-venue",
+    locationId: "main-venue",
     description:
       "Wedding ceremony will begin promptly at 4:00pm in the courtyard."
   },
