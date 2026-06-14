@@ -38,17 +38,17 @@ var VENUES = {
 // `id` can be used for anchors or reference (e.g., "reception").
 var SCHEDULE_ITEMS = [
   // -------- Friday (optional events) --------
-  {
-    id: "rehearsal-dinner",
-    type: "other", // "ceremony" | "reception" | "other"
-    dayLabel: "Friday",
-    date: "Friday, September 18, 2026",
-    time: "6:00 pm",
-    title: "Rehearsal dinner",
-    locationId: "rehearsal-dinner-location",
-    description:
-      "Rehearsal details are still to be determined."
-  },
+  // {
+  //   id: "rehearsal-dinner",
+  //   type: "other", // "ceremony" | "reception" | "other"
+  //   dayLabel: "Friday",
+  //   date: "Friday, September 18, 2026",
+  //   time: "6:00 pm",
+  //   title: "Rehearsal dinner",
+  //   locationId: "rehearsal-dinner-location",
+  //   description:
+  //     "Rehearsal details are still to be determined."
+  // },
 
   // -------- Saturday (wedding day) --------
   {
