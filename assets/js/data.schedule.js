@@ -51,17 +51,17 @@ var SCHEDULE_ITEMS = [
   // },
 
   // -------- Saturday (wedding day) --------
-  {
-    id: "getting-ready",
-    type: "other",
-    dayLabel: "Saturday",
-    date: "Saturday, September 19, 2026",
-    time: "Morning / early afternoon",
-    title: "Getting ready",
-    locationId: "main-venue",
-    description:
-      "Wedding party will arrive earlier for photos and preparation. Exact times will be shared directly with the wedding party."
-  },
+  // {
+  //   id: "getting-ready",
+  //   type: "other",
+  //   dayLabel: "Saturday",
+  //   date: "Saturday, September 19, 2026",
+  //   time: "Morning / early afternoon",
+  //   title: "Getting ready",
+  //   locationId: "main-venue",
+  //   description:
+  //     "Wedding party will arrive earlier for photos and preparation. Exact times will be shared directly with the wedding party."
+  // },
   {
     id: "guest-arrival",
     type: "other",
