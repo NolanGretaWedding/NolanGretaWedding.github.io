@@ -80,7 +80,7 @@ var SCHEDULE_ITEMS = [
     date: "Saturday, September 19, 2026",
     time: "4:00 pm",
     title: "Ceremony",
-    locationId: "main-venue",
+    // locationId: "main-venue",
     description:
       "Wedding ceremony will begin promptly at 4:00pm in the courtyard."
   },
@@ -91,7 +91,7 @@ var SCHEDULE_ITEMS = [
     date: "Saturday, September 19, 2026",
     time: "4:30 pm",
     title: "Cocktail hour",
-    locationId: "main-venue",
+    // locationId: "main-venue",
     description:
       "Drinks and hors d'oeuvres will be served outside the courtyard while the couple takes photos."
   },
@@ -102,7 +102,7 @@ var SCHEDULE_ITEMS = [
     date: "Saturday, September 19, 2026",
     time: "5:30 pm",
     title: "Reception",
-    locationId: "main-venue",
+    // locationId: "main-venue",
     description:
       "Taco bar, open bar with beer and wine, dancing, and merriment to follow cocktail hour."
   },
@@ -113,7 +113,7 @@ var SCHEDULE_ITEMS = [
     date: "Saturday, September 19, 2026",
     time: "9:30 pm",
     title: "Send-off",
-    locationId: "main-venue",
+    // locationId: "main-venue",
     description:
       "We'll wrap up the night with a send-off around 9:30pm. Feel free to join in the fun or head out whenever you're ready!"
   },
