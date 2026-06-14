@@ -17,13 +17,13 @@ var VENUES = {
     mapUrl: "https://maps.app.goo.gl/EKHSDG4gvmL983jW8",
     notes: "Ceremony, cocktail hour, and reception will be held at this location."
   },
-  "rehearsal-dinner-location": {
-    id: "rehearsal-dinner-location",
-    name: "TBD Rehearsal Dinner Location",
-    address: "TBD Address",
-    mapUrl: "TBD Map URL",
-    notes: "Placeholder for rehearsal dinner details"
-  },
+  // "rehearsal-dinner-location": {
+  //   id: "rehearsal-dinner-location",
+  //   name: "TBD Rehearsal Dinner Location",
+  //   address: "TBD Address",
+  //   mapUrl: "TBD Map URL",
+  //   notes: "Placeholder for rehearsal dinner details"
+  // },
   // "farewell-brunch-location": {
   //   id: "farewell-brunch-location",
   //   name: "Farewell Brunch Spot",
