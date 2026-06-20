@@ -9,6 +9,7 @@ var INVITED_NAMES = [
   "Greta Frederick Harteis",
   "Maureen Bosak",
   "Emma Buckley",
+  "Logan Chandler",
   "Mike Ciampaglia",
   "Rene Ciampaglia",
   "Emmy Copeland",
