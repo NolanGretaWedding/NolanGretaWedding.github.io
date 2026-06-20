@@ -918,14 +918,52 @@ body[data-page="registry"] .registry-grid {
 }
 
 
-.registry-link-bubbles {
+/* Registry card layout */
+.registry-grid {
+  align-items: stretch;
+  }
+  
+  .registry-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  }
+  
+  /* Keeps the text spacing consistent inside each card */
+  .registry-card-header {
+  margin-bottom: 0.75rem;
+  }
+  
+  .registry-card p {
+  margin-bottom: 1rem;
+  }
+  
+  .registry-meta {
+  margin-bottom: 1.25rem;
+  }
+  
+  /* Pushes all registry buttons to the bottom of each card */
+  .registry-card > .btn,
+  .registry-link-bubbles {
+  margin-top: auto;
+  }
+  
+  /* Makes single registry buttons match the full card width */
+  .registry-card > .btn {
+  width: 100%;
+  justify-content: center;
+  text-align: center;
+  }
+  
+  /* Makes Williams Sonoma and Crate & Barrel split evenly */
+  .registry-link-bubbles {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 0.75rem;
-  margin-top: 1.25rem;
   width: 100%;
   }
   
+  /* Makes each kitchen registry bubble equal size */
   .registry-link-bubble {
   display: flex;
   align-items: center;
@@ -935,4 +973,12 @@ body[data-page="registry"] .registry-grid {
   border-radius: 999px;
   white-space: nowrap;
   }
+  
+  /* Stack the two kitchen buttons on smaller screens */
+  @media (max-width: 520px) {
+  .registry-link-bubbles {
+  grid-template-columns: 1fr;
+  }
+  }
+  
   
