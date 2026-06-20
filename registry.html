@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -6,15 +7,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <!-- Core styles -->
+
   <link rel="stylesheet" href="assets/css/base.css" />
   <link rel="stylesheet" href="assets/css/layout.css" />
   <link rel="stylesheet" href="assets/css/components.css" />
   <link rel="stylesheet" href="assets/css/pages.css" />
 
-  <meta
-    name="description"
-    content="Registry information for Nolan and Greta's wedding."
-  />
+<meta
+ name="description"
+ content="Registry information for Nolan and Greta's wedding."
+/>
+
 </head>
 <body data-page="registry">
   <!-- HEADER / NAVBAR -->
@@ -33,33 +36,36 @@
         </a>
       </div>
 
-      <!-- Mobile nav toggle -->
-      <button
-        class="nav-toggle"
-        data-nav-toggle
-        aria-label="Toggle navigation"
-        aria-expanded="false"
-      >
-        <span class="nav-toggle-bar"></span>
-        <span class="nav-toggle-bar"></span>
-        <span class="nav-toggle-bar"></span>
-      </button>
+```
+  <!-- Mobile nav toggle -->
+  <button
+    class="nav-toggle"
+    data-nav-toggle
+    aria-label="Toggle navigation"
+    aria-expanded="false"
+  >
+    <span class="nav-toggle-bar"></span>
+    <span class="nav-toggle-bar"></span>
+    <span class="nav-toggle-bar"></span>
+  </button>
 
-      <!-- Main navigation -->
-      <nav class="site-nav" data-nav>
-        <a href="index.html">Home</a>
-        <a href="rsvp.html">RSVP</a>
-        <a href="schedule.html">Schedule</a>
-        <a href="registry.html">Registry</a>
-        <a href="party.html">Wedding Party</a>
-        <a href="travel.html">Travel</a>
-        <a href="faq.html">FAQ</a>
-        <a href="story.html">Our Story</a>
-      </nav>
-    </div>
+  <!-- Main navigation -->
+  <nav class="site-nav" data-nav>
+    <a href="index.html">Home</a>
+    <a href="rsvp.html">RSVP</a>
+    <a href="schedule.html">Schedule</a>
+    <a href="registry.html">Registry</a>
+    <a href="party.html">Wedding Party</a>
+    <a href="travel.html">Travel</a>
+    <a href="faq.html">FAQ</a>
+    <a href="story.html">Our Story</a>
+  </nav>
+</div>
 
-    <!-- Mobile overlay -->
-    <div class="nav-overlay" data-nav-overlay></div>
+<!-- Mobile overlay -->
+<div class="nav-overlay" data-nav-overlay></div>
+```
+
   </header>
 
   <main>
@@ -78,169 +84,156 @@
       </div>
     </section>
 
-    <!-- REGISTRY LAYOUT: side images + centered cards -->
-    <section class="page-section">
-      <div class="registry-layout-outer">
-        <div class="registry-layout">
-          <!-- LEFT IMAGE COLUMN -->
-          <div class="registry-side registry-side-left">
-            <figure class="registry-side-item">
-              <img
-                src="assets/img/registry-left-1.jpg"
-                alt="A favorite detail from Nolan and Greta's home"
-                class="registry-side-image"
-              />
-            </figure>
-          </div>
+```
+<!-- REGISTRY LAYOUT: side images + centered cards -->
+<section class="page-section">
+  <div class="registry-layout-outer">
+    <div class="registry-layout">
+      <!-- LEFT IMAGE COLUMN -->
+      <div class="registry-side registry-side-left">
+        <figure class="registry-side-item">
+          <img
+            src="assets/img/registry-left-1.jpg"
+            alt="A favorite detail from Nolan and Greta's home"
+            class="registry-side-image"
+          />
+        </figure>
+      </div>
 
-          <!-- CENTER COLUMN: REGISTRY CARDS -->
-          <div class="registry-main">
-            <div class="registry-grid">
-              <!-- Amazon registry -->
-              <article class="card registry-card">
-                <div class="registry-card-header">
-                  <p class="page-kicker registry-card-kicker">Home essentials</p>
-                  <h2>Amazon Registry</h2>
-                </div>
-
-                <p>
-                  Our Amazon registry includes a mix of practical pieces, everyday
-                  home items, and a few fun things we are excited to use together.
-                </p>
-
-                <p class="text-muted registry-meta">
-                  Gifts can be shipped directly to us through the address saved
-                  in the registry.
-                </p>
-
-                <a
-                  class="btn btn-primary"
-                  href="https://www.amazon.com/wedding/registry/389QYWL4R2RKY"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  View Amazon registry
-                </a>
-              </article>
-
-              <!-- Williams Sonoma -->
-              <article class="card registry-card">
-                <div class="registry-card-header">
-                  <p class="page-kicker registry-card-kicker">Kitchen favorites</p>
-                  <h2>Williams Sonoma</h2>
-                </div>
-
-                <p>
-                  Our Williams Sonoma registry focuses on kitchen pieces we will
-                  use often, from cooking essentials to items for hosting family
-                  and friends.
-                </p>
-
-                <p class="text-muted registry-meta">
-                  Thank you for helping us build a home filled with good meals,
-                  shared tables, and new traditions.
-                </p>
-
-                <a
-                  class="btn btn-primary"
-                  href="https://www.williams-sonoma.com/registry/d56jr8wv79/registry-list.html"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  View Williams Sonoma registry
-                </a>
-              </article>
-
-              <!-- Crate & Barrel -->
-              <article class="card registry-card">
-                <div class="registry-card-header">
-                  <p class="page-kicker registry-card-kicker">Home & entertaining</p>
-                  <h2>Crate &amp; Barrel Registry</h2>
-                </div>
-
-                <p>
-                  Our Crate &amp; Barrel registry includes home, dining, and
-                  entertaining items that will help us settle into married life
-                  and welcome people into our home.
-                </p>
-
-                <p class="text-muted registry-meta">
-                  We are grateful for anything that helps make our home feel
-                  warm, useful, and ready for the years ahead.
-                </p>
-
-                <a
-                  class="btn btn-primary"
-                  href="https://www.crateandbarrel.com/gift-registry/greta-frederick-harteis-and-nolan-pettit/r7574728"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  View Crate &amp; Barrel registry
-                </a>
-              </article>
-
-              <!-- Honeymoon / experiences registry -->
-              <article class="card registry-card">
-                <div class="registry-card-header">
-                  <p class="page-kicker registry-card-kicker">Memories together</p>
-                  <h2>Honeymoon &amp; Experiences</h2>
-                </div>
-
-                <p>
-                  For anyone who prefers to give toward experiences, we also have
-                  a honeymoon fund. Contributions will help us celebrate with
-                  travel, meals, and memories after the wedding.
-                </p>
-
-                <p class="text-muted registry-meta">
-                  Our honeymoon fund is listed on the Honeyfund website. We will
-                  be excited to share photos and stories from the trip.
-                </p>
-
-                <a
-                  class="btn btn-primary"
-                  href="https://www.honeyfund.com/site/pettit-frederick-harteis-09-19-2026"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  View honeymoon fund
-                </a>
-              </article>
+      <!-- CENTER COLUMN: REGISTRY CARDS -->
+      <div class="registry-main">
+        <div class="registry-grid">
+          <!-- Amazon registry -->
+          <article class="card registry-card">
+            <div class="registry-card-header">
+              <p class="page-kicker registry-card-kicker">Home essentials</p>
+              <h2>Amazon Registry</h2>
             </div>
-          </div>
 
-          <!-- RIGHT IMAGE COLUMN -->
-          <div class="registry-side registry-side-right">
-            <figure class="registry-side-item">
-              <img
-                src="assets/img/registry-right-1.jpg"
-                alt="A favorite travel moment with Nolan and Greta"
-                class="registry-side-image"
-              />
-            </figure>
-          </div>
+            <p>
+              Our Amazon registry includes a mix of practical pieces, everyday
+              home items, and a few fun things we are excited to use together.
+            </p>
+
+            <p class="text-muted registry-meta">
+              Gifts can be shipped directly to us through the address saved
+              in the registry.
+            </p>
+
+            <a
+              class="btn btn-primary"
+              href="https://www.amazon.com/wedding/registry/389QYWL4R2RKY"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View Amazon registry
+            </a>
+          </article>
+
+          <!-- Kitchen registries -->
+          <article class="card registry-card">
+            <div class="registry-card-header">
+              <p class="page-kicker registry-card-kicker">Kitchen favorites</p>
+              <h2>Kitchen Registries</h2>
+            </div>
+
+            <p>
+              Our kitchen registries include pieces we will use often, from
+              everyday cooking essentials to items for hosting family and
+              friends.
+            </p>
+
+            <p class="text-muted registry-meta">
+              Thank you for helping us build a home filled with good meals,
+              shared tables, and new traditions.
+            </p>
+
+            <div class="registry-link-bubbles">
+              <a
+                class="btn btn-primary registry-link-bubble"
+                href="https://www.williams-sonoma.com/registry/d56jr8wv79/registry-list.html"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Williams Sonoma
+              </a>
+
+              <a
+                class="btn btn-primary registry-link-bubble"
+                href="https://www.crateandbarrel.com/gift-registry/greta-frederick-harteis-and-nolan-pettit/r7574728"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Crate &amp; Barrel
+              </a>
+            </div>
+          </article>
+
+          <!-- Honeymoon / experiences registry -->
+          <article class="card registry-card">
+            <div class="registry-card-header">
+              <p class="page-kicker registry-card-kicker">Memories together</p>
+              <h2>Honeymoon &amp; Experiences</h2>
+            </div>
+
+            <p>
+              For anyone who prefers to give toward experiences, we also have
+              a honeymoon fund. Contributions will help us celebrate with
+              travel, meals, and memories after the wedding.
+            </p>
+
+            <p class="text-muted registry-meta">
+              Our honeymoon fund is listed on the Honeyfund website. We will
+              be excited to share photos and stories from the trip.
+            </p>
+
+            <a
+              class="btn btn-primary"
+              href="https://www.honeyfund.com/site/pettit-frederick-harteis-09-19-2026"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View honeymoon fund
+            </a>
+          </article>
         </div>
       </div>
-    </section>
 
-    <!-- NOTE SECTION -->
-    <section class="page-section section-alt">
-      <div class="content-width">
-        <header class="section-header">
-          <p class="page-kicker">A note from us</p>
-          <h2>A quick note about gifts</h2>
-        </header>
-
-        <p>
-          We feel incredibly grateful to have you in our lives and for your
-          support over the years. Your presence on our wedding day is truly the
-          greatest gift. Anything beyond that is simply appreciated.
-        </p>
+      <!-- RIGHT IMAGE COLUMN -->
+      <div class="registry-side registry-side-right">
+        <figure class="registry-side-item">
+          <img
+            src="assets/img/registry-right-1.jpg"
+            alt="A favorite travel moment with Nolan and Greta"
+            class="registry-side-image"
+          />
+        </figure>
       </div>
-    </section>
+    </div>
+  </div>
+</section>
+
+<!-- NOTE SECTION -->
+<section class="page-section section-alt">
+  <div class="content-width">
+    <header class="section-header">
+      <p class="page-kicker">A note from us</p>
+      <h2>A quick note about gifts</h2>
+    </header>
+
+    <p>
+      We feel incredibly grateful to have you in our lives and for your
+      support over the years. Your presence on our wedding day is truly the
+      greatest gift. Anything beyond that is simply appreciated.
+    </p>
+  </div>
+</section>
+```
+
   </main>
 
   <!-- FOOTER -->
+
   <footer class="site-footer">
     <div class="content-width footer-inner">
       <p>&copy; <span id="footer-year"></span> Nolan &amp; Greta</p>
@@ -251,18 +244,27 @@
   </footer>
 
   <!-- DATA SCRIPTS -->
+
   <script src="assets/js/data.schedule.js"></script>
+
   <script src="assets/js/data.travel.js"></script>
+
   <script src="assets/js/data.faq.js"></script>
+
   <script src="assets/js/data.party.js"></script>
 
   <!-- BEHAVIOR SCRIPTS -->
+
   <script src="assets/js/navbar.js"></script>
+
   <script src="assets/js/modal.js"></script>
+
   <script src="assets/js/countdown.js"></script>
+
   <script src="assets/js/main.js"></script>
 
   <!-- Footer year -->
+
   <script>
     (function () {
       var el = document.getElementById("footer-year");
@@ -271,5 +273,6 @@
       }
     })();
   </script>
+
 </body>
 </html>

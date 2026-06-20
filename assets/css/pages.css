@@ -916,3 +916,18 @@ body[data-page="registry"] .registry-grid {
     justify-content: center;
   }
 }
+
+
+.registry-link-bubbles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.25rem;
+  }
+  
+  .registry-link-bubble {
+  border-radius: 999px;
+  padding-inline: 1.25rem;
+  white-space: nowrap;
+  }
+  
